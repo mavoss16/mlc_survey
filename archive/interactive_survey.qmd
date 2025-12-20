@@ -1,0 +1,392 @@
+---
+title: "Memorial Lutheran Church Survey"
+format: 
+  dashboard:
+    orientation: columns
+    scrolling: false
+---
+
+
+```{css, echo=FALSE}
+.crosstalk-count {
+  display: inline !important;
+}
+```
+
+```{r}
+library(readr)
+
+library(dplyr)
+library(ggplot2)
+library(ggfittext)
+library(forcats)
+library(plotly)
+
+library(crosstalk)
+library(DT)
+library(htmltools)
+
+```
+
+
+
+```{r}
+
+wide <- read_rds("survey_clean.rds")
+long <- read_rds("survey_multi_long.rds")
+
+shared_wide <- SharedData$new(wide, key = ~response_id)
+shared_long <- SharedData$new(wide, key = ~response_id, group = "long_survey")
+
+# Make sure long has the same id column (linked to wide)
+# If long is derived from wide, carry over the id
+church_exp_data <- long |> filter(question == "church_expectations_choice")
+connection_data <- long |> filter(question == "connection_factors_choice")
+music_data <- long |> filter(question == "music_styles_choice")
+church_pri_data <- long |> filter(question == "church_priorities_choice")
+
+# Use the same group name "survey"
+shared_church_exp <- SharedData$new(church_exp_data, key = ~response_id, group = "long_survey")
+shared_connection <- SharedData$new(connection_data, key = ~response_id, group = "long_survey")
+shared_music <- SharedData$new(music_data, key = ~response_id, group = "long_survey")
+shared_church_pri <- SharedData$new(church_pri_data, key = ~response_id, group = "long_survey")
+
+```
+
+```{r}
+inline_count <- function(shared_data, id = NULL, unique_by = NULL, 
+                         filter_col = NULL, filter_not_na = FALSE) {
+  if (is.null(id)) {
+    id <- paste0("count_", sample.int(10000, 1))
+  }
+  
+  data <- shared_data$data()
+  
+  # Apply initial filtering if specified
+  if (!is.null(filter_col)) {
+    if (filter_not_na) {
+      data <- data[!is.na(data[[filter_col]]), ]
+    }
+  }
+  
+  # Calculate initial count
+  if (!is.null(unique_by)) {
+    total <- length(unique(data[[unique_by]]))
+  } else {
+    total <- nrow(data)
+  }
+  
+  # Create the counter span
+  counter_span <- tags$span(
+    id = id, 
+    class = "crosstalk-count", 
+    style = "font-weight: bold; color: #0066cc; display: inline;",
+    as.character(total)
+  )
+  
+  # Build data storage for JavaScript
+  if (!is.null(filter_col) || !is.null(unique_by)) {
+    # Need to store data for filtering/unique counting
+    cols_needed <- unique(c(filter_col, unique_by))
+    data_subset <- shared_data$data()[cols_needed]
+    data_list <- lapply(seq_len(nrow(shared_data$data())), function(i) {
+      row_data <- lapply(data_subset[i, , drop = FALSE], function(x) x)
+      names(row_data) <- cols_needed
+      row_data
+    })
+    names(data_list) <- shared_data$key()
+    data_json <- jsonlite::toJSON(data_list, auto_unbox = TRUE, na = "null")
+  } else {
+    data_json <- "{}"
+  }
+  
+  # Build JavaScript for filtering
+  filter_js <- if (!is.null(filter_col) && filter_not_na) {
+    sprintf('
+      // Filter out rows where filter_col is NA
+      filteredKeys = filteredKeys.filter(function(key) {
+        var rowData = allData[key];
+        return rowData && rowData["%s"] !== null && rowData["%s"] !== undefined;
+      });
+    ', filter_col, filter_col)
+  } else {
+    ''
+  }
+  
+  # Build JavaScript for unique counting
+  unique_js <- if (!is.null(unique_by)) {
+    sprintf('
+      // Get unique values from the column
+      var uniqueVals = new Set();
+      filteredKeys.forEach(function(key) {
+        var rowData = allData[key];
+        if (rowData && rowData["%s"] !== null && rowData["%s"] !== undefined) {
+          uniqueVals.add(rowData["%s"]);
+        }
+      });
+      count = uniqueVals.size;
+    ', unique_by, unique_by, unique_by)
+  } else {
+    'count = filteredKeys.length;'
+  }
+  
+  update_script <- tags$script(HTML(sprintf('
+    (function() {
+      var shared = crosstalk.group("%s");
+      var keysVar = shared.var("keys");
+      var filterVar = shared.var("filter");
+      var counter = document.getElementById("%s");
+      
+      // Store all data with keys
+      var allData = %s;
+      
+      function updateCount() {
+        var keys = keysVar.get();
+        var filter = filterVar.get();
+        var count;
+        
+        // Determine which keys are currently visible
+        var filteredKeys;
+        if (filter && filter.length > 0) {
+          filteredKeys = filter;
+        } else if (keys && keys.length > 0) {
+          filteredKeys = keys;
+        } else {
+          count = %d;
+          counter.textContent = count;
+          return;
+        }
+        
+        %s
+        
+        %s
+        
+        counter.textContent = count;
+      }
+      
+      keysVar.on("change", updateCount);
+      filterVar.on("change", updateCount);
+    })();
+  ', 
+  shared_data$groupName(), 
+  id,
+  data_json,
+  total,
+  filter_js,
+  unique_js)), type = "text/javascript")
+  
+  # Wrap in a container to prevent line breaks
+  tagList(
+    tags$span(style = "display: inline;", counter_span),
+    update_script
+  )
+}
+
+
+inline_count_text <- function(...) {
+  as.character(htmltools::tagList(inline_count(...)))
+}
+```
+
+
+# Single-Choice
+
+## Column {width=30%}
+
+Number of respondents (filtered): `r inline_count_text(shared_wide)`
+
+```{r}
+filter_checkbox("age", "Age", shared_wide, ~age_range)
+filter_checkbox("service", "Primary Service", shared_wide, ~service_attendance)
+filter_checkbox("association", "Church Association Length", shared_wide, ~church_association_length)
+```
+
+
+```{r}
+# datatable(shared_wide)
+```
+
+## Row
+
+
+```{r}
+
+plot_ly(shared_wide, x = ~church_mission_feeling, type = "histogram") |>
+  layout(
+    xaxis = list(tickangle = 45),
+    yaxis = list(title = "count")
+  ) |>
+  config(
+    staticPlot = TRUE
+  )
+
+```
+
+```{r}
+
+plot_ly(shared_wide, x = ~service_attendance, type = "histogram") %>%
+  layout(
+    xaxis = list(tickangle = 45),
+    yaxis = list(title = "count")
+  ) |>
+  config(
+    staticPlot = TRUE
+  )
+
+```
+
+## Row
+
+```{r}
+
+plot_ly(shared_wide, x = ~spiritually_fed, type = "histogram") %>%
+  layout(
+    xaxis = list(tickangle = 45),
+    yaxis = list(title = "count")
+  ) |>
+  config(
+    staticPlot = TRUE
+  )
+
+```
+
+```{r}
+
+plot_ly(shared_wide, x = ~connected_to_community, type = "histogram") %>%
+  layout(
+    xaxis = list(tickangle = 45),
+    yaxis = list(title = "count")
+  ) |>
+  config(
+    staticPlot = TRUE
+  )
+```
+
+
+# Multi-Choice
+
+## Column {width=30%}
+
+Number of respondents (filtered): `r inline_count_text(shared_long, unique_by = "response_id")`
+
+```{r}
+
+filter_checkbox("age", "Age", shared_long, ~age_range)
+filter_checkbox("service", "Primary Service", shared_long, ~service_attendance)
+filter_checkbox("association", "Church Association Length", shared_long, ~church_association_length)
+```
+
+
+```{r}
+# datatable(shared_wide)
+```
+
+## Row
+
+
+## Row {.tabset}
+
+```{r}
+#| title: Church Expectations
+
+# Get all unique responses for this question
+church_exp_categories <- long |> 
+  filter(question == "church_expectations_choice") |> 
+  pull(response) |> 
+  unique()
+
+plot_ly(shared_church_exp, 
+        x = ~response, 
+        type = "histogram") %>%
+  layout(
+    xaxis = list(
+      tickangle = 45, 
+      title = "response",
+      categoryorder = "array",
+      categoryarray = church_exp_categories
+    ),
+    yaxis = list(title = "Count")
+  ) |>
+  config(
+    staticPlot = TRUE
+  )
+```
+
+```{r}
+#| title: Connection Factors
+
+# Get all unique responses for this question
+connection_categories <- long |> 
+  filter(question == "connection_factors_choice") |> 
+  pull(response) |> 
+  unique()
+
+plot_ly(shared_connection, 
+        x = ~response, 
+        type = "histogram") %>%
+  layout(
+    xaxis = list(
+      tickangle = 45, 
+      title = "response",
+      categoryorder = "array",
+      categoryarray = connection_categories
+    ),
+    yaxis = list(title = "Count")
+  ) |>
+  config(
+    staticPlot = TRUE
+  )
+```
+
+
+```{r}
+#| title: Music Styles
+
+# Get all unique responses for this question
+music_categories <- long |> 
+  filter(question == "music_styles_choice") |> 
+  pull(response) |> 
+  unique()
+
+plot_ly(shared_music, 
+        x = ~response, 
+        type = "histogram") %>%
+  layout(
+    xaxis = list(
+      tickangle = 45, 
+      title = "response",
+      categoryorder = "array",
+      categoryarray = music_categories
+    ),
+    yaxis = list(title = "Count")
+  ) |>
+  config(
+    staticPlot = TRUE
+  )
+```
+
+```{r}
+#| title: Church Priorities
+
+# Get all unique responses for this question
+church_pri_categories <- long |> 
+  filter(question == "church_priorities_choice") |> 
+  pull(response) |> 
+  unique()
+
+plot_ly(shared_church_pri, 
+        x = ~response, 
+        type = "histogram") %>%
+  layout(
+    xaxis = list(
+      tickangle = 45, 
+      title = "response",
+      categoryorder = "array",
+      categoryarray = church_pri_categories
+    ),
+    yaxis = list(title = "Count")
+  ) |>
+  config(
+    staticPlot = TRUE
+  )
+```

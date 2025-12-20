@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Memorial Lutheran Church Survey</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="interactive_survey_files/libs/clipboard/clipboard.min.js"></script>
+<script src="interactive_survey_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="interactive_survey_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="interactive_survey_files/libs/quarto-html/popper.min.js"></script>
+<script src="interactive_survey_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="interactive_survey_files/libs/quarto-html/anchor.min.js"></script>
+<link href="interactive_survey_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="interactive_survey_files/libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="interactive_survey_files/libs/quarto-html/quarto-syntax-highlighting-dark-2fef5ea3f8957b3e4ecc936fc74692ca.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="interactive_survey_files/libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="interactive_survey_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="interactive_survey_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="interactive_survey_files/libs/bootstrap/bootstrap-f547ca9f9d437787137f2e2308b6cde4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="interactive_survey_files/libs/bootstrap/bootstrap-dark-f547ca9f9d437787137f2e2308b6cde4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="interactive_survey_files/libs/bootstrap/bootstrap-f547ca9f9d437787137f2e2308b6cde4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="interactive_survey_files/libs/quarto-dashboard/quarto-dashboard.js"></script>
+<script src="interactive_survey_files/libs/quarto-dashboard/stickythead.js"></script>
+
+
+
+<script src="interactive_survey_files/libs/quarto-dashboard/web-components.js" type="module"></script>
+<script src="interactive_survey_files/libs/quarto-dashboard/components.js"></script>
+
+<script src="interactive_survey_files/libs/jquery-3.5.1/jquery.min.js"></script>
+
+<link href="interactive_survey_files/libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+
+<script src="interactive_survey_files/libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+
+<link href="interactive_survey_files/libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+
+<script src="interactive_survey_files/libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<script src="interactive_survey_files/libs/plotly-binding-4.11.0/plotly.js"></script>
+
+<script src="interactive_survey_files/libs/typedarray-0.1/typedarray.min.js"></script>
+
+<link href="interactive_survey_files/libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+
+<script src="interactive_survey_files/libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
+
+
+</head>
+
+<body class="quarto-dashboard dashboard-fill fullcontent quarto-light">
+
+<header id="quarto-dashboard-header">
+<nav class="navbar navbar-expand-md slim" data-bs-theme="dark">
+  <div class="navbar-container container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-controls="dashboard-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>    
+
+
+    <div class="navbar-brand-container">       
+
+      <div class="navbar-title">
+        <div class="navbar-title-text"><a href="#">Memorial Lutheran Church Survey</a></div>
+        
+        
+      </div>
+    </div>
+<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-single-choice" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#single-choice" data-scrolling="false" href="#single-choice" aria-controls="single-choice" aria-selected="true"><span class="nav-link-text">Single-Choice</span></a></li><li class="nav-item" role="presentation"><a id="tab-multi-choice" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#multi-choice" data-scrolling="false" href="#multi-choice" aria-controls="multi-choice" aria-selected="false"><span class="nav-link-text">Multi-Choice</span></a></li></ul></div></div>
+</nav>
+</header>
+<div class="page-layout-custom quarto-dashboard-content bslib-gap-spacing html-fill-container bslib-page-fill quarto-dashboard-pages">  
+
+<div class="cell bslib-grid-item html-fill-item">
+<style type="text/css">
+.crosstalk-count {
+  display: inline !important;
+}
+</style>
+</div>
+<div class="bslib-grid-item html-fill-item tab-content bslib-grid" data-layout="fill" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div id="single-choice" class="dashboard-page tab-pane show active html-fill-item html-fill-container" data-orientation="columns" aria-labelledby="tab-single-choice">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 30fr) minmax(3em, 35fr) minmax(3em, 35fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content) minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+Number of respondents (filtered): <span style="display: inline;"> <span id="count_6464" class="crosstalk-count" style="font-weight: bold; color: #0066cc; display: inline;">80</span> </span>
+<script type="text/javascript">
+    (function() {
+      var shared = crosstalk.group("SharedDatae67afc4a");
+      var keysVar = shared.var("keys");
+      var filterVar = shared.var("filter");
+      var counter = document.getElementById("count_6464");
+      
+      // Store all data with keys
+      var allData = {};
+      
+      function updateCount() {
+        var keys = keysVar.get();
+        var filter = filterVar.get();
+        var count;
+        
+        // Determine which keys are currently visible
+        var filteredKeys;
+        if (filter && filter.length > 0) {
+          filteredKeys = filter;
+        } else if (keys && keys.length > 0) {
+          filteredKeys = keys;
+        } else {
+          count = 80;
+          counter.textContent = count;
+          return;
+        }
+        
+        
+        
+        count = filteredKeys.length;
+        
+        counter.textContent = count;
+      }
+      
+      keysVar.on("change", updateCount);
+      filterVar.on("change", updateCount);
+    })();
+  </script>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div id="age" class="form-group crosstalk-input-checkboxgroup crosstalk-input html-fill-item html-fill-container">
+<label class="control-label" for="age">Age</label>
+<div class="crosstalk-options-group html-fill-item html-fill-container">
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="age" value="Under 20">
+<span>Under 20</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="age" value="20-29">
+<span>20-29</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="age" value="30-39">
+<span>30-39</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="age" value="40-49">
+<span>40-49</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="age" value="50-59">
+<span>50-59</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="age" value="60-69">
+<span>60-69</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="age" value="70-79">
+<span>70-79</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="age" value="80+">
+<span>80+</span>
+</label>
+</div>
+</div>
+<script type="application/json" data-for="age">{
+  "map": {
+    "Under 20": ["R_1dv5WAxkCEzm1TM"],
+    "20-29": ["R_64UkuuH1Ds25cDT", "R_5myYhTxXtDq1U7l", "R_1JVZFH3kjybQrgG", "R_6R8YBwtkyDeqdyb", "R_5fm17LyEFULpPPh", "R_6LZXCKo02cEaeSl", "R_3IFpLxQBgREgWOm", "R_11thiYQcpfDKmsh"],
+    "30-39": ["R_1l0iU2pZ2HRMSbs", "R_1fW3aejsAZy3n4c", "R_5gZUAiqd4jOHnCL", "R_1GDLZsTm5zRei7v", "R_3V5OCw9XINsJG0N", "R_7Rt2cqWoz69e7hr"],
+    "40-49": ["R_62m4OISVKnlCXL3", "R_3e2UcPeADnICI5A", "R_3CrzzpPsEXUaApz", "R_178WY4rVATRPXSV", "R_3ek1sQwHtQz0IzC", "R_1VcI0fqnvFcO5d7", "R_1BS0W9Xqw2q51g7", "R_5f40mmupkNftobv"],
+    "50-59": ["R_6RVsujRNKTLa0Zl", "R_3v6BKrAzxDNwdrT", "R_50U58I2nRaMPGj1", "R_572qIi1mir7REjq", "R_3EreZcBPxCmRre9", "R_7rIXnNgINiHily8", "R_1KUFFjJGHF7UhN3", "R_7Envb7tk57iZ9sQ", "R_5z7uztvtFacRuIF", "R_1qu2yUEC56rZmNj", "R_6LAP6k893XeUpsN", "R_6UMcpsZv05ocBRD", "R_76GxWVggwxMsq0F", "R_6s0u9GnjurSfOKP", "R_7YgJ37dNiEkMVpT"],
+    "60-69": ["R_3QKvKaryvHdPKfg", "R_5IttVZEsOUdNOod", "R_3ij8fHLaKZrma6l", "R_6sgKB6hng8W0RQ2", "R_624LvcU3uGxvyQz", "R_7NdlhGtlyt7YUfv"],
+    "70-79": ["R_6rGNuBlbms9Bd7M", "R_7otBvuSXPK0wuTf", "R_3CDvyioa8KTHbqG", "R_5t2sTwI4tHkLAT7", "R_5ojohYHc4vogqJw", "R_30Y8Ap5FOUCwm1R", "R_7oqcQ1aQlgZy97I", "R_1MmbuE8IGbLDz6W", "R_7H6JUBOtFfY3vN7", "R_7tzKKTrTh5sKlJe", "R_3tpJV0mpixsqJW1", "R_1PTffYW9MMjNLQP", "R_7C5NjSTDju5hkZP", "R_1eHBoL9vB8iARsR", "R_7tGavkTqE2N3kPI", "R_3itiuzc343xuN6u", "R_5bNITm2IqfssOGt", "R_3wu7re6gejMYVH3", "R_1LzMNFeY14AWh55"],
+    "80+": ["R_1hGauCjUp7J6RuQ", "R_14iOyaKS2zpgcWB", "R_7Ej4LrfPFK6cwDF", "R_3E68JWpVIKwD5ci", "R_6ZuUM6ZCPVeyJCV", "R_6bAWelZpYxSfWql", "R_6608YHXctCZwegF", "R_3l9N6hPTxjo5dd9", "R_6wzWp7zTu1Zsa0z"]
+  },
+  "group": ["SharedDatae67afc4a"]
+}</script>
+</div>
+</div>
+<div class="cell-output-display html-fill-item html-fill-container">
+<div id="service" class="form-group crosstalk-input-checkboxgroup crosstalk-input html-fill-item html-fill-container">
+<label class="control-label" for="service">Primary Service</label>
+<div class="crosstalk-options-group html-fill-item html-fill-container">
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="service" value="Online">
+<span>Online</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="service" value="Saturday 5 pm">
+<span>Saturday 5 pm</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="service" value="Sunday 11 am">
+<span>Sunday 11 am</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="service" value="Sunday 8:30 am">
+<span>Sunday 8:30 am</span>
+</label>
+</div>
+</div>
+<script type="application/json" data-for="service">{
+  "map": {
+    "Online": ["R_3QKvKaryvHdPKfg", "R_5GO1Qdrxgcd5COp"],
+    "Saturday 5 pm": ["R_6RVsujRNKTLa0Zl", "R_7otBvuSXPK0wuTf", "R_3CDvyioa8KTHbqG", "R_50U58I2nRaMPGj1", "R_7oqcQ1aQlgZy97I", "R_1KUFFjJGHF7UhN3", "R_6ZuUM6ZCPVeyJCV", "R_6s0u9GnjurSfOKP", "R_3wu7re6gejMYVH3"],
+    "Sunday 11 am": ["R_64UkuuH1Ds25cDT", "R_1l0iU2pZ2HRMSbs", "R_1dv5WAxkCEzm1TM", "R_5IttVZEsOUdNOod", "R_5fm17LyEFULpPPh", "R_7Envb7tk57iZ9sQ", "R_1GDLZsTm5zRei7v", "R_1qu2yUEC56rZmNj", "R_3E68JWpVIKwD5ci", "R_6sgKB6hng8W0RQ2", "R_7Rt2cqWoz69e7hr", "R_5f40mmupkNftobv", "R_7NdlhGtlyt7YUfv"],
+    "Sunday 8:30 am": ["R_3v6BKrAzxDNwdrT", "R_7dGTh8PZN2F2RH2", "R_62m4OISVKnlCXL3", "R_5myYhTxXtDq1U7l", "R_1JVZFH3kjybQrgG", "R_3e2UcPeADnICI5A", "R_3CrzzpPsEXUaApz", "R_6rGNuBlbms9Bd7M", "R_6R8YBwtkyDeqdyb", "R_1fW3aejsAZy3n4c", "R_5gZUAiqd4jOHnCL", "R_178WY4rVATRPXSV", "R_1hGauCjUp7J6RuQ", "R_5t2sTwI4tHkLAT7", "R_5ojohYHc4vogqJw", "R_30Y8Ap5FOUCwm1R", "R_1MmbuE8IGbLDz6W", "R_7H6JUBOtFfY3vN7", "R_572qIi1mir7REjq", "R_3EreZcBPxCmRre9", "R_3ek1sQwHtQz0IzC", "R_7rIXnNgINiHily8", "R_1VcI0fqnvFcO5d7", "R_7tzKKTrTh5sKlJe", "R_6LZXCKo02cEaeSl", "R_14iOyaKS2zpgcWB", "R_7Ej4LrfPFK6cwDF", "R_5z7uztvtFacRuIF", "R_1BS0W9Xqw2q51g7", "R_3tpJV0mpixsqJW1", "R_1PTffYW9MMjNLQP", "R_6LAP6k893XeUpsN", "R_3ij8fHLaKZrma6l", "R_6UMcpsZv05ocBRD", "R_76GxWVggwxMsq0F", "R_3V5OCw9XINsJG0N", "R_3IFpLxQBgREgWOm", "R_11thiYQcpfDKmsh", "R_624LvcU3uGxvyQz", "R_7C5NjSTDju5hkZP", "R_1eHBoL9vB8iARsR", "R_14jDnqK80sBJVoM", "R_6bAWelZpYxSfWql", "R_7tGavkTqE2N3kPI", "R_6608YHXctCZwegF", "R_3itiuzc343xuN6u", "R_3l9N6hPTxjo5dd9", "R_6wzWp7zTu1Zsa0z", "R_5bNITm2IqfssOGt", "R_1LzMNFeY14AWh55", "R_3e9ecdyuPheK04Q", "R_7YgJ37dNiEkMVpT"]
+  },
+  "group": ["SharedDatae67afc4a"]
+}</script>
+</div>
+</div>
+<div class="cell-output-display html-fill-item html-fill-container">
+<div id="association" class="form-group crosstalk-input-checkboxgroup crosstalk-input html-fill-item html-fill-container">
+<label class="control-label" for="association">Church Association Length</label>
+<div class="crosstalk-options-group html-fill-item html-fill-container">
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="association" value="Less than 1 year">
+<span>Less than 1 year</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="association" value="1-5 years">
+<span>1-5 years</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="association" value="6-10 years">
+<span>6-10 years</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="association" value="11-15 years">
+<span>11-15 years</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="association" value="16-20 years">
+<span>16-20 years</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="association" value="Over 20 years">
+<span>Over 20 years</span>
+</label>
+</div>
+</div>
+<script type="application/json" data-for="association">{
+  "map": {
+    "Less than 1 year": ["R_1dv5WAxkCEzm1TM"],
+    "1-5 years": ["R_64UkuuH1Ds25cDT", "R_6R8YBwtkyDeqdyb", "R_5gZUAiqd4jOHnCL", "R_178WY4rVATRPXSV", "R_572qIi1mir7REjq", "R_5fm17LyEFULpPPh", "R_6LZXCKo02cEaeSl", "R_7Envb7tk57iZ9sQ", "R_7Rt2cqWoz69e7hr", "R_1eHBoL9vB8iARsR", "R_7tGavkTqE2N3kPI", "R_1LzMNFeY14AWh55"],
+    "6-10 years": ["R_62m4OISVKnlCXL3", "R_5myYhTxXtDq1U7l", "R_1JVZFH3kjybQrgG", "R_1fW3aejsAZy3n4c", "R_5t2sTwI4tHkLAT7", "R_3ek1sQwHtQz0IzC", "R_1VcI0fqnvFcO5d7", "R_1qu2yUEC56rZmNj", "R_3IFpLxQBgREgWOm"],
+    "11-15 years": ["R_3e2UcPeADnICI5A", "R_3CrzzpPsEXUaApz", "R_6rGNuBlbms9Bd7M", "R_1l0iU2pZ2HRMSbs", "R_1PTffYW9MMjNLQP", "R_3V5OCw9XINsJG0N", "R_5f40mmupkNftobv", "R_5bNITm2IqfssOGt"],
+    "16-20 years": ["R_7rIXnNgINiHily8", "R_7tzKKTrTh5sKlJe", "R_1BS0W9Xqw2q51g7", "R_1GDLZsTm5zRei7v", "R_6LAP6k893XeUpsN"],
+    "Over 20 years": ["R_6RVsujRNKTLa0Zl", "R_3v6BKrAzxDNwdrT", "R_7otBvuSXPK0wuTf", "R_3CDvyioa8KTHbqG", "R_1hGauCjUp7J6RuQ", "R_5ojohYHc4vogqJw", "R_30Y8Ap5FOUCwm1R", "R_50U58I2nRaMPGj1", "R_7oqcQ1aQlgZy97I", "R_1MmbuE8IGbLDz6W", "R_7H6JUBOtFfY3vN7", "R_3QKvKaryvHdPKfg", "R_3EreZcBPxCmRre9", "R_1KUFFjJGHF7UhN3", "R_5IttVZEsOUdNOod", "R_14iOyaKS2zpgcWB", "R_7Ej4LrfPFK6cwDF", "R_5z7uztvtFacRuIF", "R_3tpJV0mpixsqJW1", "R_3E68JWpVIKwD5ci", "R_6ZuUM6ZCPVeyJCV", "R_3ij8fHLaKZrma6l", "R_6sgKB6hng8W0RQ2", "R_6UMcpsZv05ocBRD", "R_76GxWVggwxMsq0F", "R_11thiYQcpfDKmsh", "R_5GO1Qdrxgcd5COp", "R_624LvcU3uGxvyQz", "R_7C5NjSTDju5hkZP", "R_6s0u9GnjurSfOKP", "R_14jDnqK80sBJVoM", "R_6bAWelZpYxSfWql", "R_6608YHXctCZwegF", "R_3itiuzc343xuN6u", "R_3l9N6hPTxjo5dd9", "R_6wzWp7zTu1Zsa0z", "R_3wu7re6gejMYVH3", "R_7NdlhGtlyt7YUfv", "R_7YgJ37dNiEkMVpT"]
+  },
+  "group": ["SharedDatae67afc4a"]
+}</script>
+</div>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div><div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr) minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="plotly html-widget html-fill-item html-fill-container" id="htmlwidget-139c6098e316fa67a56c" style="width:100%;height:406px;"></div>
+<script type="application/json" data-for="htmlwidget-139c6098e316fa67a56c">{"x":{"visdat":{"1b34675e5400":["function () ","plotlyVisDat"]},"cur_data":"1b34675e5400","attrs":{"1b34675e5400":{"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"histogram"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"tickangle":45,"title":"church_mission_feeling","type":"category","categoryorder":"array","categoryarray":["Very dissatisfied","Dissatisfied","Neither satisfied nor dissatisfied","Satisfied","Very Sattisfied"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"count"},"dragmode":"zoom","hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"staticPlot":true},"data":[{"x":["Satisfied","Neither satisfied nor dissatisfied","Satisfied","Satisfied","Satisfied","Satisfied","Satisfied","Very dissatisfied","Satisfied","Neither satisfied nor dissatisfied","Satisfied","Very dissatisfied","Satisfied","Satisfied","Neither satisfied nor dissatisfied","Satisfied","Satisfied","Neither satisfied nor dissatisfied","Neither satisfied nor dissatisfied","Satisfied","Satisfied","Satisfied","Neither satisfied nor dissatisfied","Satisfied","Satisfied","Satisfied","Satisfied","Satisfied","Satisfied","Satisfied"],"type":"histogram","key":["R_64UkuuH1Ds25cDT","R_6RVsujRNKTLa0Zl","R_3v6BKrAzxDNwdrT","R_3e2UcPeADnICI5A","R_3CrzzpPsEXUaApz","R_1l0iU2pZ2HRMSbs","R_1fW3aejsAZy3n4c","R_178WY4rVATRPXSV","R_50U58I2nRaMPGj1","R_3EreZcBPxCmRre9","R_7rIXnNgINiHily8","R_1VcI0fqnvFcO5d7","R_7tzKKTrTh5sKlJe","R_5fm17LyEFULpPPh","R_7Ej4LrfPFK6cwDF","R_1PTffYW9MMjNLQP","R_6LAP6k893XeUpsN","R_6UMcpsZv05ocBRD","R_76GxWVggwxMsq0F","R_3V5OCw9XINsJG0N","R_5GO1Qdrxgcd5COp","R_624LvcU3uGxvyQz","R_6s0u9GnjurSfOKP","R_14jDnqK80sBJVoM","R_5bNITm2IqfssOGt","R_3wu7re6gejMYVH3","R_1LzMNFeY14AWh55","R_3e9ecdyuPheK04Q","R_7NdlhGtlyt7YUfv","R_7YgJ37dNiEkMVpT"],"set":"SharedDatae67afc4a","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","_isNestedKey":false,"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0,"ctGroups":["SharedDatae67afc4a"]},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="plotly html-widget html-fill-item html-fill-container" id="htmlwidget-c0ba782b6c7ce3bc7bc6" style="width:100%;height:406px;"></div>
+<script type="application/json" data-for="htmlwidget-c0ba782b6c7ce3bc7bc6">{"x":{"visdat":{"1b346096a19":["function () ","plotlyVisDat"]},"cur_data":"1b346096a19","attrs":{"1b346096a19":{"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"histogram"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"tickangle":45,"title":"service_attendance","type":"category","categoryorder":"array","categoryarray":["Online","Saturday 5 pm","Sunday 11 am","Sunday 8:30 am"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"count"},"dragmode":"zoom","hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"staticPlot":true},"data":[{"x":["Sunday 11 am","Saturday 5 pm","Sunday 8:30 am","Sunday 8:30 am","Sunday 8:30 am","Sunday 8:30 am","Sunday 8:30 am","Sunday 8:30 am","Sunday 8:30 am","Sunday 8:30 am","Saturday 5 pm","Sunday 11 am","Sunday 8:30 am","Sunday 8:30 am","Sunday 11 am","Sunday 8:30 am","Sunday 8:30 am","Saturday 5 pm","Sunday 8:30 am","Sunday 8:30 am","Sunday 8:30 am","Sunday 8:30 am","Saturday 5 pm","Saturday 5 pm","Sunday 8:30 am","Sunday 8:30 am","Online","Sunday 8:30 am","Sunday 8:30 am","Sunday 8:30 am","Sunday 8:30 am","Sunday 8:30 am","Sunday 8:30 am","Saturday 5 pm","Sunday 11 am","Sunday 11 am","Sunday 8:30 am","Sunday 8:30 am","Sunday 11 am","Sunday 8:30 am","Sunday 8:30 am","Sunday 8:30 am","Sunday 11 am","Sunday 8:30 am","Sunday 11 am","Sunday 8:30 am","Sunday 8:30 am","Sunday 11 am","Saturday 5 pm","Sunday 8:30 am","Sunday 11 am","Sunday 8:30 am","Sunday 8:30 am","Sunday 8:30 am","Sunday 8:30 am","Sunday 8:30 am","Sunday 11 am","Online","Sunday 8:30 am","Sunday 8:30 am","Sunday 8:30 am","Sunday 11 am","Saturday 5 pm","Sunday 8:30 am","Sunday 8:30 am","Sunday 8:30 am","Sunday 8:30 am","Sunday 8:30 am","Sunday 8:30 am","Sunday 8:30 am","Sunday 8:30 am","Saturday 5 pm","Sunday 8:30 am","Sunday 8:30 am","Sunday 11 am","Sunday 8:30 am"],"type":"histogram","key":["R_64UkuuH1Ds25cDT","R_6RVsujRNKTLa0Zl","R_3v6BKrAzxDNwdrT","R_7dGTh8PZN2F2RH2","R_62m4OISVKnlCXL3","R_5myYhTxXtDq1U7l","R_1JVZFH3kjybQrgG","R_3e2UcPeADnICI5A","R_3CrzzpPsEXUaApz","R_6rGNuBlbms9Bd7M","R_7otBvuSXPK0wuTf","R_1l0iU2pZ2HRMSbs","R_6R8YBwtkyDeqdyb","R_1fW3aejsAZy3n4c","R_1dv5WAxkCEzm1TM","R_5gZUAiqd4jOHnCL","R_178WY4rVATRPXSV","R_3CDvyioa8KTHbqG","R_1hGauCjUp7J6RuQ","R_5t2sTwI4tHkLAT7","R_5ojohYHc4vogqJw","R_30Y8Ap5FOUCwm1R","R_50U58I2nRaMPGj1","R_7oqcQ1aQlgZy97I","R_1MmbuE8IGbLDz6W","R_7H6JUBOtFfY3vN7","R_3QKvKaryvHdPKfg","R_572qIi1mir7REjq","R_3EreZcBPxCmRre9","R_3ek1sQwHtQz0IzC","R_7rIXnNgINiHily8","R_1VcI0fqnvFcO5d7","R_7tzKKTrTh5sKlJe","R_1KUFFjJGHF7UhN3","R_5IttVZEsOUdNOod","R_5fm17LyEFULpPPh","R_6LZXCKo02cEaeSl","R_14iOyaKS2zpgcWB","R_7Envb7tk57iZ9sQ","R_7Ej4LrfPFK6cwDF","R_5z7uztvtFacRuIF","R_1BS0W9Xqw2q51g7","R_1GDLZsTm5zRei7v","R_3tpJV0mpixsqJW1","R_1qu2yUEC56rZmNj","R_1PTffYW9MMjNLQP","R_6LAP6k893XeUpsN","R_3E68JWpVIKwD5ci","R_6ZuUM6ZCPVeyJCV","R_3ij8fHLaKZrma6l","R_6sgKB6hng8W0RQ2","R_6UMcpsZv05ocBRD","R_76GxWVggwxMsq0F","R_3V5OCw9XINsJG0N","R_3IFpLxQBgREgWOm","R_11thiYQcpfDKmsh","R_7Rt2cqWoz69e7hr","R_5GO1Qdrxgcd5COp","R_624LvcU3uGxvyQz","R_7C5NjSTDju5hkZP","R_1eHBoL9vB8iARsR","R_5f40mmupkNftobv","R_6s0u9GnjurSfOKP","R_14jDnqK80sBJVoM","R_6bAWelZpYxSfWql","R_7tGavkTqE2N3kPI","R_6608YHXctCZwegF","R_3itiuzc343xuN6u","R_3l9N6hPTxjo5dd9","R_6wzWp7zTu1Zsa0z","R_5bNITm2IqfssOGt","R_3wu7re6gejMYVH3","R_1LzMNFeY14AWh55","R_3e9ecdyuPheK04Q","R_7NdlhGtlyt7YUfv","R_7YgJ37dNiEkMVpT"],"set":"SharedDatae67afc4a","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","_isNestedKey":false,"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0,"ctGroups":["SharedDatae67afc4a"]},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div><div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr) minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="plotly html-widget html-fill-item html-fill-container" id="htmlwidget-889df48280c0623fa76f" style="width:100%;height:406px;"></div>
+<script type="application/json" data-for="htmlwidget-889df48280c0623fa76f">{"x":{"visdat":{"1b34365c4c1b":["function () ","plotlyVisDat"]},"cur_data":"1b34365c4c1b","attrs":{"1b34365c4c1b":{"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"histogram"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"tickangle":45,"title":"spiritually_fed","type":"category","categoryorder":"array","categoryarray":["Rarely","Sometimes","Usually","Always"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"count"},"dragmode":"zoom","hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"staticPlot":true},"data":[{"x":["Always","Rarely","Usually","Usually","Usually","Usually","Always","Usually","Usually","Always","Always","Usually","Usually","Sometimes","Sometimes","Usually","Always","Usually","Usually","Usually","Always","Always","Sometimes","Always","Always","Always","Usually","Always","Usually","Sometimes","Sometimes","Sometimes","Usually","Usually","Always","Usually","Usually","Always","Usually","Usually","Usually","Usually","Always","Always","Usually","Usually","Always","Usually","Always","Usually","Usually","Usually","Usually","Usually","Sometimes","Sometimes","Usually","Always","Sometimes","Usually","Always","Usually","Rarely","Usually","Always","Always","Always","Usually","Usually","Always","Sometimes","Always","Always","Usually","Usually","Sometimes"],"type":"histogram","key":["R_64UkuuH1Ds25cDT","R_6RVsujRNKTLa0Zl","R_3v6BKrAzxDNwdrT","R_7dGTh8PZN2F2RH2","R_62m4OISVKnlCXL3","R_5myYhTxXtDq1U7l","R_1JVZFH3kjybQrgG","R_3e2UcPeADnICI5A","R_3CrzzpPsEXUaApz","R_6rGNuBlbms9Bd7M","R_7otBvuSXPK0wuTf","R_1l0iU2pZ2HRMSbs","R_6R8YBwtkyDeqdyb","R_1fW3aejsAZy3n4c","R_1dv5WAxkCEzm1TM","R_5gZUAiqd4jOHnCL","R_178WY4rVATRPXSV","R_3CDvyioa8KTHbqG","R_1hGauCjUp7J6RuQ","R_5t2sTwI4tHkLAT7","R_5ojohYHc4vogqJw","R_30Y8Ap5FOUCwm1R","R_50U58I2nRaMPGj1","R_7oqcQ1aQlgZy97I","R_1MmbuE8IGbLDz6W","R_7H6JUBOtFfY3vN7","R_3QKvKaryvHdPKfg","R_572qIi1mir7REjq","R_3EreZcBPxCmRre9","R_3ek1sQwHtQz0IzC","R_7rIXnNgINiHily8","R_1VcI0fqnvFcO5d7","R_7tzKKTrTh5sKlJe","R_1KUFFjJGHF7UhN3","R_5IttVZEsOUdNOod","R_5fm17LyEFULpPPh","R_6LZXCKo02cEaeSl","R_14iOyaKS2zpgcWB","R_7Envb7tk57iZ9sQ","R_7Ej4LrfPFK6cwDF","R_5z7uztvtFacRuIF","R_1BS0W9Xqw2q51g7","R_1GDLZsTm5zRei7v","R_3tpJV0mpixsqJW1","R_1qu2yUEC56rZmNj","R_1PTffYW9MMjNLQP","R_6LAP6k893XeUpsN","R_3E68JWpVIKwD5ci","R_6ZuUM6ZCPVeyJCV","R_3ij8fHLaKZrma6l","R_6sgKB6hng8W0RQ2","R_6UMcpsZv05ocBRD","R_76GxWVggwxMsq0F","R_3V5OCw9XINsJG0N","R_3IFpLxQBgREgWOm","R_11thiYQcpfDKmsh","R_7Rt2cqWoz69e7hr","R_5GO1Qdrxgcd5COp","R_624LvcU3uGxvyQz","R_7C5NjSTDju5hkZP","R_1eHBoL9vB8iARsR","R_5f40mmupkNftobv","R_6s0u9GnjurSfOKP","R_14jDnqK80sBJVoM","R_6bAWelZpYxSfWql","R_7tGavkTqE2N3kPI","R_6608YHXctCZwegF","R_3itiuzc343xuN6u","R_3l9N6hPTxjo5dd9","R_6wzWp7zTu1Zsa0z","R_5bNITm2IqfssOGt","R_3wu7re6gejMYVH3","R_1LzMNFeY14AWh55","R_3e9ecdyuPheK04Q","R_7NdlhGtlyt7YUfv","R_7YgJ37dNiEkMVpT"],"set":"SharedDatae67afc4a","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","_isNestedKey":false,"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0,"ctGroups":["SharedDatae67afc4a"]},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="plotly html-widget html-fill-item html-fill-container" id="htmlwidget-4dc4248e3f60ddc62264" style="width:100%;height:406px;"></div>
+<script type="application/json" data-for="htmlwidget-4dc4248e3f60ddc62264">{"x":{"visdat":{"1b343605787b":["function () ","plotlyVisDat"]},"cur_data":"1b343605787b","attrs":{"1b343605787b":{"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"histogram"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"tickangle":45,"title":"connected_to_community","type":"category","categoryorder":"array","categoryarray":["Rarely","Sometimes","Usually","Always"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"count"},"dragmode":"zoom","hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"staticPlot":true},"data":[{"x":["Sometimes","Sometimes","Always","Usually","Usually","Usually","Usually","Sometimes","Sometimes","Always","Always","Rarely","Usually","Sometimes","Usually","Always","Sometimes","Always","Usually","Usually","Always","Usually","Sometimes","Always","Usually","Always","Sometimes","Usually","Sometimes","Sometimes","Rarely","Usually","Usually","Sometimes","Always","Sometimes","Always","Usually","Sometimes","Usually","Sometimes","Always","Usually","Usually","Sometimes","Sometimes","Always","Always","Always","Sometimes","Usually","Sometimes","Usually","Usually","Always","Usually","Always","Always","Usually","Always","Sometimes","Usually","Usually","Always","Always","Always","Always","Usually","Always","Always","Usually","Sometimes","Usually","Always","Sometimes","Always"],"type":"histogram","key":["R_64UkuuH1Ds25cDT","R_6RVsujRNKTLa0Zl","R_3v6BKrAzxDNwdrT","R_7dGTh8PZN2F2RH2","R_62m4OISVKnlCXL3","R_5myYhTxXtDq1U7l","R_1JVZFH3kjybQrgG","R_3e2UcPeADnICI5A","R_3CrzzpPsEXUaApz","R_6rGNuBlbms9Bd7M","R_7otBvuSXPK0wuTf","R_1l0iU2pZ2HRMSbs","R_6R8YBwtkyDeqdyb","R_1fW3aejsAZy3n4c","R_1dv5WAxkCEzm1TM","R_5gZUAiqd4jOHnCL","R_178WY4rVATRPXSV","R_3CDvyioa8KTHbqG","R_1hGauCjUp7J6RuQ","R_5t2sTwI4tHkLAT7","R_5ojohYHc4vogqJw","R_30Y8Ap5FOUCwm1R","R_50U58I2nRaMPGj1","R_7oqcQ1aQlgZy97I","R_1MmbuE8IGbLDz6W","R_7H6JUBOtFfY3vN7","R_3QKvKaryvHdPKfg","R_572qIi1mir7REjq","R_3EreZcBPxCmRre9","R_3ek1sQwHtQz0IzC","R_7rIXnNgINiHily8","R_1VcI0fqnvFcO5d7","R_7tzKKTrTh5sKlJe","R_1KUFFjJGHF7UhN3","R_5IttVZEsOUdNOod","R_5fm17LyEFULpPPh","R_6LZXCKo02cEaeSl","R_14iOyaKS2zpgcWB","R_7Envb7tk57iZ9sQ","R_7Ej4LrfPFK6cwDF","R_5z7uztvtFacRuIF","R_1BS0W9Xqw2q51g7","R_1GDLZsTm5zRei7v","R_3tpJV0mpixsqJW1","R_1qu2yUEC56rZmNj","R_1PTffYW9MMjNLQP","R_6LAP6k893XeUpsN","R_3E68JWpVIKwD5ci","R_6ZuUM6ZCPVeyJCV","R_3ij8fHLaKZrma6l","R_6sgKB6hng8W0RQ2","R_6UMcpsZv05ocBRD","R_76GxWVggwxMsq0F","R_3V5OCw9XINsJG0N","R_3IFpLxQBgREgWOm","R_11thiYQcpfDKmsh","R_7Rt2cqWoz69e7hr","R_5GO1Qdrxgcd5COp","R_624LvcU3uGxvyQz","R_7C5NjSTDju5hkZP","R_1eHBoL9vB8iARsR","R_5f40mmupkNftobv","R_6s0u9GnjurSfOKP","R_14jDnqK80sBJVoM","R_6bAWelZpYxSfWql","R_7tGavkTqE2N3kPI","R_6608YHXctCZwegF","R_3itiuzc343xuN6u","R_3l9N6hPTxjo5dd9","R_6wzWp7zTu1Zsa0z","R_5bNITm2IqfssOGt","R_3wu7re6gejMYVH3","R_1LzMNFeY14AWh55","R_3e9ecdyuPheK04Q","R_7NdlhGtlyt7YUfv","R_7YgJ37dNiEkMVpT"],"set":"SharedDatae67afc4a","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","_isNestedKey":false,"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0,"ctGroups":["SharedDatae67afc4a"]},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+</div><div id="multi-choice" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="columns" aria-labelledby="tab-multi-choice">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 30fr) minmax(3em, 70fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content) minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+Number of respondents (filtered): <span style="display: inline;"> <span id="count_6045" class="crosstalk-count" style="font-weight: bold; color: #0066cc; display: inline;">80</span> </span>
+<script type="text/javascript">
+    (function() {
+      var shared = crosstalk.group("long_survey");
+      var keysVar = shared.var("keys");
+      var filterVar = shared.var("filter");
+      var counter = document.getElementById("count_6045");
+      
+      // Store all data with keys
+      var allData = {"R_64UkuuH1Ds25cDT":{"response_id":"R_64UkuuH1Ds25cDT"},"R_6RVsujRNKTLa0Zl":{"response_id":"R_6RVsujRNKTLa0Zl"},"R_3v6BKrAzxDNwdrT":{"response_id":"R_3v6BKrAzxDNwdrT"},"R_7dGTh8PZN2F2RH2":{"response_id":"R_7dGTh8PZN2F2RH2"},"R_62m4OISVKnlCXL3":{"response_id":"R_62m4OISVKnlCXL3"},"R_5myYhTxXtDq1U7l":{"response_id":"R_5myYhTxXtDq1U7l"},"R_1JVZFH3kjybQrgG":{"response_id":"R_1JVZFH3kjybQrgG"},"R_3e2UcPeADnICI5A":{"response_id":"R_3e2UcPeADnICI5A"},"R_3CrzzpPsEXUaApz":{"response_id":"R_3CrzzpPsEXUaApz"},"R_6rGNuBlbms9Bd7M":{"response_id":"R_6rGNuBlbms9Bd7M"},"R_7otBvuSXPK0wuTf":{"response_id":"R_7otBvuSXPK0wuTf"},"R_1l0iU2pZ2HRMSbs":{"response_id":"R_1l0iU2pZ2HRMSbs"},"R_6R8YBwtkyDeqdyb":{"response_id":"R_6R8YBwtkyDeqdyb"},"R_1fW3aejsAZy3n4c":{"response_id":"R_1fW3aejsAZy3n4c"},"R_1dv5WAxkCEzm1TM":{"response_id":"R_1dv5WAxkCEzm1TM"},"R_5gZUAiqd4jOHnCL":{"response_id":"R_5gZUAiqd4jOHnCL"},"R_178WY4rVATRPXSV":{"response_id":"R_178WY4rVATRPXSV"},"R_3CDvyioa8KTHbqG":{"response_id":"R_3CDvyioa8KTHbqG"},"R_1hGauCjUp7J6RuQ":{"response_id":"R_1hGauCjUp7J6RuQ"},"R_5t2sTwI4tHkLAT7":{"response_id":"R_5t2sTwI4tHkLAT7"},"R_5ojohYHc4vogqJw":{"response_id":"R_5ojohYHc4vogqJw"},"R_30Y8Ap5FOUCwm1R":{"response_id":"R_30Y8Ap5FOUCwm1R"},"R_1rNtfTgkCRrsVQw":{"response_id":"R_1rNtfTgkCRrsVQw"},"R_50U58I2nRaMPGj1":{"response_id":"R_50U58I2nRaMPGj1"},"R_7GjMDMYFHDwjT5E":{"response_id":"R_7GjMDMYFHDwjT5E"},"R_7oqcQ1aQlgZy97I":{"response_id":"R_7oqcQ1aQlgZy97I"},"R_6DGtuDGhELeJmH7":{"response_id":"R_6DGtuDGhELeJmH7"},"R_1MmbuE8IGbLDz6W":{"response_id":"R_1MmbuE8IGbLDz6W"},"R_7H6JUBOtFfY3vN7":{"response_id":"R_7H6JUBOtFfY3vN7"},"R_3QKvKaryvHdPKfg":{"response_id":"R_3QKvKaryvHdPKfg"},"R_572qIi1mir7REjq":{"response_id":"R_572qIi1mir7REjq"},"R_3EreZcBPxCmRre9":{"response_id":"R_3EreZcBPxCmRre9"},"R_3ek1sQwHtQz0IzC":{"response_id":"R_3ek1sQwHtQz0IzC"},"R_7rIXnNgINiHily8":{"response_id":"R_7rIXnNgINiHily8"},"R_1VcI0fqnvFcO5d7":{"response_id":"R_1VcI0fqnvFcO5d7"},"R_7tzKKTrTh5sKlJe":{"response_id":"R_7tzKKTrTh5sKlJe"},"R_1KUFFjJGHF7UhN3":{"response_id":"R_1KUFFjJGHF7UhN3"},"R_5IttVZEsOUdNOod":{"response_id":"R_5IttVZEsOUdNOod"},"R_5fm17LyEFULpPPh":{"response_id":"R_5fm17LyEFULpPPh"},"R_6LZXCKo02cEaeSl":{"response_id":"R_6LZXCKo02cEaeSl"},"R_14iOyaKS2zpgcWB":{"response_id":"R_14iOyaKS2zpgcWB"},"R_7Envb7tk57iZ9sQ":{"response_id":"R_7Envb7tk57iZ9sQ"},"R_7Ej4LrfPFK6cwDF":{"response_id":"R_7Ej4LrfPFK6cwDF"},"R_5ONlDi8rJUuzm94":{"response_id":"R_5ONlDi8rJUuzm94"},"R_5z7uztvtFacRuIF":{"response_id":"R_5z7uztvtFacRuIF"},"R_1BS0W9Xqw2q51g7":{"response_id":"R_1BS0W9Xqw2q51g7"},"R_1GDLZsTm5zRei7v":{"response_id":"R_1GDLZsTm5zRei7v"},"R_3tpJV0mpixsqJW1":{"response_id":"R_3tpJV0mpixsqJW1"},"R_1qu2yUEC56rZmNj":{"response_id":"R_1qu2yUEC56rZmNj"},"R_1PTffYW9MMjNLQP":{"response_id":"R_1PTffYW9MMjNLQP"},"R_6LAP6k893XeUpsN":{"response_id":"R_6LAP6k893XeUpsN"},"R_3E68JWpVIKwD5ci":{"response_id":"R_3E68JWpVIKwD5ci"},"R_6ZuUM6ZCPVeyJCV":{"response_id":"R_6ZuUM6ZCPVeyJCV"},"R_3ij8fHLaKZrma6l":{"response_id":"R_3ij8fHLaKZrma6l"},"R_6sgKB6hng8W0RQ2":{"response_id":"R_6sgKB6hng8W0RQ2"},"R_6UMcpsZv05ocBRD":{"response_id":"R_6UMcpsZv05ocBRD"},"R_76GxWVggwxMsq0F":{"response_id":"R_76GxWVggwxMsq0F"},"R_3V5OCw9XINsJG0N":{"response_id":"R_3V5OCw9XINsJG0N"},"R_3IFpLxQBgREgWOm":{"response_id":"R_3IFpLxQBgREgWOm"},"R_11thiYQcpfDKmsh":{"response_id":"R_11thiYQcpfDKmsh"},"R_7Rt2cqWoz69e7hr":{"response_id":"R_7Rt2cqWoz69e7hr"},"R_5GO1Qdrxgcd5COp":{"response_id":"R_5GO1Qdrxgcd5COp"},"R_624LvcU3uGxvyQz":{"response_id":"R_624LvcU3uGxvyQz"},"R_7C5NjSTDju5hkZP":{"response_id":"R_7C5NjSTDju5hkZP"},"R_1eHBoL9vB8iARsR":{"response_id":"R_1eHBoL9vB8iARsR"},"R_5f40mmupkNftobv":{"response_id":"R_5f40mmupkNftobv"},"R_6s0u9GnjurSfOKP":{"response_id":"R_6s0u9GnjurSfOKP"},"R_14jDnqK80sBJVoM":{"response_id":"R_14jDnqK80sBJVoM"},"R_6bAWelZpYxSfWql":{"response_id":"R_6bAWelZpYxSfWql"},"R_7tGavkTqE2N3kPI":{"response_id":"R_7tGavkTqE2N3kPI"},"R_6608YHXctCZwegF":{"response_id":"R_6608YHXctCZwegF"},"R_3itiuzc343xuN6u":{"response_id":"R_3itiuzc343xuN6u"},"R_3l9N6hPTxjo5dd9":{"response_id":"R_3l9N6hPTxjo5dd9"},"R_6wzWp7zTu1Zsa0z":{"response_id":"R_6wzWp7zTu1Zsa0z"},"R_5bNITm2IqfssOGt":{"response_id":"R_5bNITm2IqfssOGt"},"R_3wu7re6gejMYVH3":{"response_id":"R_3wu7re6gejMYVH3"},"R_1LzMNFeY14AWh55":{"response_id":"R_1LzMNFeY14AWh55"},"R_3e9ecdyuPheK04Q":{"response_id":"R_3e9ecdyuPheK04Q"},"R_7NdlhGtlyt7YUfv":{"response_id":"R_7NdlhGtlyt7YUfv"},"R_7YgJ37dNiEkMVpT":{"response_id":"R_7YgJ37dNiEkMVpT"}};
+      
+      function updateCount() {
+        var keys = keysVar.get();
+        var filter = filterVar.get();
+        var count;
+        
+        // Determine which keys are currently visible
+        var filteredKeys;
+        if (filter && filter.length > 0) {
+          filteredKeys = filter;
+        } else if (keys && keys.length > 0) {
+          filteredKeys = keys;
+        } else {
+          count = 80;
+          counter.textContent = count;
+          return;
+        }
+        
+        
+        
+        
+      // Get unique values from the column
+      var uniqueVals = new Set();
+      filteredKeys.forEach(function(key) {
+        var rowData = allData[key];
+        if (rowData && rowData["response_id"] !== null && rowData["response_id"] !== undefined) {
+          uniqueVals.add(rowData["response_id"]);
+        }
+      });
+      count = uniqueVals.size;
+    
+        
+        counter.textContent = count;
+      }
+      
+      keysVar.on("change", updateCount);
+      filterVar.on("change", updateCount);
+    })();
+  </script>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div id="age" class="form-group crosstalk-input-checkboxgroup crosstalk-input html-fill-item html-fill-container">
+<label class="control-label" for="age">Age</label>
+<div class="crosstalk-options-group html-fill-item html-fill-container">
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="age" value="Under 20">
+<span>Under 20</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="age" value="20-29">
+<span>20-29</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="age" value="30-39">
+<span>30-39</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="age" value="40-49">
+<span>40-49</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="age" value="50-59">
+<span>50-59</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="age" value="60-69">
+<span>60-69</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="age" value="70-79">
+<span>70-79</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="age" value="80+">
+<span>80+</span>
+</label>
+</div>
+</div>
+<script type="application/json" data-for="age">{
+  "map": {
+    "Under 20": ["R_1dv5WAxkCEzm1TM"],
+    "20-29": ["R_64UkuuH1Ds25cDT", "R_5myYhTxXtDq1U7l", "R_1JVZFH3kjybQrgG", "R_6R8YBwtkyDeqdyb", "R_5fm17LyEFULpPPh", "R_6LZXCKo02cEaeSl", "R_3IFpLxQBgREgWOm", "R_11thiYQcpfDKmsh"],
+    "30-39": ["R_1l0iU2pZ2HRMSbs", "R_1fW3aejsAZy3n4c", "R_5gZUAiqd4jOHnCL", "R_1GDLZsTm5zRei7v", "R_3V5OCw9XINsJG0N", "R_7Rt2cqWoz69e7hr"],
+    "40-49": ["R_62m4OISVKnlCXL3", "R_3e2UcPeADnICI5A", "R_3CrzzpPsEXUaApz", "R_178WY4rVATRPXSV", "R_3ek1sQwHtQz0IzC", "R_1VcI0fqnvFcO5d7", "R_1BS0W9Xqw2q51g7", "R_5f40mmupkNftobv"],
+    "50-59": ["R_6RVsujRNKTLa0Zl", "R_3v6BKrAzxDNwdrT", "R_50U58I2nRaMPGj1", "R_572qIi1mir7REjq", "R_3EreZcBPxCmRre9", "R_7rIXnNgINiHily8", "R_1KUFFjJGHF7UhN3", "R_7Envb7tk57iZ9sQ", "R_5z7uztvtFacRuIF", "R_1qu2yUEC56rZmNj", "R_6LAP6k893XeUpsN", "R_6UMcpsZv05ocBRD", "R_76GxWVggwxMsq0F", "R_6s0u9GnjurSfOKP", "R_7YgJ37dNiEkMVpT"],
+    "60-69": ["R_3QKvKaryvHdPKfg", "R_5IttVZEsOUdNOod", "R_3ij8fHLaKZrma6l", "R_6sgKB6hng8W0RQ2", "R_624LvcU3uGxvyQz", "R_7NdlhGtlyt7YUfv"],
+    "70-79": ["R_6rGNuBlbms9Bd7M", "R_7otBvuSXPK0wuTf", "R_3CDvyioa8KTHbqG", "R_5t2sTwI4tHkLAT7", "R_5ojohYHc4vogqJw", "R_30Y8Ap5FOUCwm1R", "R_7oqcQ1aQlgZy97I", "R_1MmbuE8IGbLDz6W", "R_7H6JUBOtFfY3vN7", "R_7tzKKTrTh5sKlJe", "R_3tpJV0mpixsqJW1", "R_1PTffYW9MMjNLQP", "R_7C5NjSTDju5hkZP", "R_1eHBoL9vB8iARsR", "R_7tGavkTqE2N3kPI", "R_3itiuzc343xuN6u", "R_5bNITm2IqfssOGt", "R_3wu7re6gejMYVH3", "R_1LzMNFeY14AWh55"],
+    "80+": ["R_1hGauCjUp7J6RuQ", "R_14iOyaKS2zpgcWB", "R_7Ej4LrfPFK6cwDF", "R_3E68JWpVIKwD5ci", "R_6ZuUM6ZCPVeyJCV", "R_6bAWelZpYxSfWql", "R_6608YHXctCZwegF", "R_3l9N6hPTxjo5dd9", "R_6wzWp7zTu1Zsa0z"]
+  },
+  "group": ["long_survey"]
+}</script>
+</div>
+</div>
+<div class="cell-output-display html-fill-item html-fill-container">
+<div id="service" class="form-group crosstalk-input-checkboxgroup crosstalk-input html-fill-item html-fill-container">
+<label class="control-label" for="service">Primary Service</label>
+<div class="crosstalk-options-group html-fill-item html-fill-container">
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="service" value="Online">
+<span>Online</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="service" value="Saturday 5 pm">
+<span>Saturday 5 pm</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="service" value="Sunday 11 am">
+<span>Sunday 11 am</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="service" value="Sunday 8:30 am">
+<span>Sunday 8:30 am</span>
+</label>
+</div>
+</div>
+<script type="application/json" data-for="service">{
+  "map": {
+    "Online": ["R_3QKvKaryvHdPKfg", "R_5GO1Qdrxgcd5COp"],
+    "Saturday 5 pm": ["R_6RVsujRNKTLa0Zl", "R_7otBvuSXPK0wuTf", "R_3CDvyioa8KTHbqG", "R_50U58I2nRaMPGj1", "R_7oqcQ1aQlgZy97I", "R_1KUFFjJGHF7UhN3", "R_6ZuUM6ZCPVeyJCV", "R_6s0u9GnjurSfOKP", "R_3wu7re6gejMYVH3"],
+    "Sunday 11 am": ["R_64UkuuH1Ds25cDT", "R_1l0iU2pZ2HRMSbs", "R_1dv5WAxkCEzm1TM", "R_5IttVZEsOUdNOod", "R_5fm17LyEFULpPPh", "R_7Envb7tk57iZ9sQ", "R_1GDLZsTm5zRei7v", "R_1qu2yUEC56rZmNj", "R_3E68JWpVIKwD5ci", "R_6sgKB6hng8W0RQ2", "R_7Rt2cqWoz69e7hr", "R_5f40mmupkNftobv", "R_7NdlhGtlyt7YUfv"],
+    "Sunday 8:30 am": ["R_3v6BKrAzxDNwdrT", "R_7dGTh8PZN2F2RH2", "R_62m4OISVKnlCXL3", "R_5myYhTxXtDq1U7l", "R_1JVZFH3kjybQrgG", "R_3e2UcPeADnICI5A", "R_3CrzzpPsEXUaApz", "R_6rGNuBlbms9Bd7M", "R_6R8YBwtkyDeqdyb", "R_1fW3aejsAZy3n4c", "R_5gZUAiqd4jOHnCL", "R_178WY4rVATRPXSV", "R_1hGauCjUp7J6RuQ", "R_5t2sTwI4tHkLAT7", "R_5ojohYHc4vogqJw", "R_30Y8Ap5FOUCwm1R", "R_1MmbuE8IGbLDz6W", "R_7H6JUBOtFfY3vN7", "R_572qIi1mir7REjq", "R_3EreZcBPxCmRre9", "R_3ek1sQwHtQz0IzC", "R_7rIXnNgINiHily8", "R_1VcI0fqnvFcO5d7", "R_7tzKKTrTh5sKlJe", "R_6LZXCKo02cEaeSl", "R_14iOyaKS2zpgcWB", "R_7Ej4LrfPFK6cwDF", "R_5z7uztvtFacRuIF", "R_1BS0W9Xqw2q51g7", "R_3tpJV0mpixsqJW1", "R_1PTffYW9MMjNLQP", "R_6LAP6k893XeUpsN", "R_3ij8fHLaKZrma6l", "R_6UMcpsZv05ocBRD", "R_76GxWVggwxMsq0F", "R_3V5OCw9XINsJG0N", "R_3IFpLxQBgREgWOm", "R_11thiYQcpfDKmsh", "R_624LvcU3uGxvyQz", "R_7C5NjSTDju5hkZP", "R_1eHBoL9vB8iARsR", "R_14jDnqK80sBJVoM", "R_6bAWelZpYxSfWql", "R_7tGavkTqE2N3kPI", "R_6608YHXctCZwegF", "R_3itiuzc343xuN6u", "R_3l9N6hPTxjo5dd9", "R_6wzWp7zTu1Zsa0z", "R_5bNITm2IqfssOGt", "R_1LzMNFeY14AWh55", "R_3e9ecdyuPheK04Q", "R_7YgJ37dNiEkMVpT"]
+  },
+  "group": ["long_survey"]
+}</script>
+</div>
+</div>
+<div class="cell-output-display html-fill-item html-fill-container">
+<div id="association" class="form-group crosstalk-input-checkboxgroup crosstalk-input html-fill-item html-fill-container">
+<label class="control-label" for="association">Church Association Length</label>
+<div class="crosstalk-options-group html-fill-item html-fill-container">
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="association" value="Less than 1 year">
+<span>Less than 1 year</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="association" value="1-5 years">
+<span>1-5 years</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="association" value="6-10 years">
+<span>6-10 years</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="association" value="11-15 years">
+<span>11-15 years</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="association" value="16-20 years">
+<span>16-20 years</span>
+</label>
+</div>
+<div class="checkbox html-fill-item html-fill-container">
+<label>
+<input type="checkbox" name="association" value="Over 20 years">
+<span>Over 20 years</span>
+</label>
+</div>
+</div>
+<script type="application/json" data-for="association">{
+  "map": {
+    "Less than 1 year": ["R_1dv5WAxkCEzm1TM"],
+    "1-5 years": ["R_64UkuuH1Ds25cDT", "R_6R8YBwtkyDeqdyb", "R_5gZUAiqd4jOHnCL", "R_178WY4rVATRPXSV", "R_572qIi1mir7REjq", "R_5fm17LyEFULpPPh", "R_6LZXCKo02cEaeSl", "R_7Envb7tk57iZ9sQ", "R_7Rt2cqWoz69e7hr", "R_1eHBoL9vB8iARsR", "R_7tGavkTqE2N3kPI", "R_1LzMNFeY14AWh55"],
+    "6-10 years": ["R_62m4OISVKnlCXL3", "R_5myYhTxXtDq1U7l", "R_1JVZFH3kjybQrgG", "R_1fW3aejsAZy3n4c", "R_5t2sTwI4tHkLAT7", "R_3ek1sQwHtQz0IzC", "R_1VcI0fqnvFcO5d7", "R_1qu2yUEC56rZmNj", "R_3IFpLxQBgREgWOm"],
+    "11-15 years": ["R_3e2UcPeADnICI5A", "R_3CrzzpPsEXUaApz", "R_6rGNuBlbms9Bd7M", "R_1l0iU2pZ2HRMSbs", "R_1PTffYW9MMjNLQP", "R_3V5OCw9XINsJG0N", "R_5f40mmupkNftobv", "R_5bNITm2IqfssOGt"],
+    "16-20 years": ["R_7rIXnNgINiHily8", "R_7tzKKTrTh5sKlJe", "R_1BS0W9Xqw2q51g7", "R_1GDLZsTm5zRei7v", "R_6LAP6k893XeUpsN"],
+    "Over 20 years": ["R_6RVsujRNKTLa0Zl", "R_3v6BKrAzxDNwdrT", "R_7otBvuSXPK0wuTf", "R_3CDvyioa8KTHbqG", "R_1hGauCjUp7J6RuQ", "R_5ojohYHc4vogqJw", "R_30Y8Ap5FOUCwm1R", "R_50U58I2nRaMPGj1", "R_7oqcQ1aQlgZy97I", "R_1MmbuE8IGbLDz6W", "R_7H6JUBOtFfY3vN7", "R_3QKvKaryvHdPKfg", "R_3EreZcBPxCmRre9", "R_1KUFFjJGHF7UhN3", "R_5IttVZEsOUdNOod", "R_14iOyaKS2zpgcWB", "R_7Ej4LrfPFK6cwDF", "R_5z7uztvtFacRuIF", "R_3tpJV0mpixsqJW1", "R_3E68JWpVIKwD5ci", "R_6ZuUM6ZCPVeyJCV", "R_3ij8fHLaKZrma6l", "R_6sgKB6hng8W0RQ2", "R_6UMcpsZv05ocBRD", "R_76GxWVggwxMsq0F", "R_11thiYQcpfDKmsh", "R_5GO1Qdrxgcd5COp", "R_624LvcU3uGxvyQz", "R_7C5NjSTDju5hkZP", "R_6s0u9GnjurSfOKP", "R_14jDnqK80sBJVoM", "R_6bAWelZpYxSfWql", "R_6608YHXctCZwegF", "R_3itiuzc343xuN6u", "R_3l9N6hPTxjo5dd9", "R_6wzWp7zTu1Zsa0z", "R_3wu7re6gejMYVH3", "R_7NdlhGtlyt7YUfv", "R_7YgJ37dNiEkMVpT"]
+  },
+  "group": ["long_survey"]
+}</script>
+</div>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div><div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header dashboard-card-no-title bslib-navs-card-title">
+
+<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-9"><li class="nav-item" role="presentation"><a href="#card-tabset-9-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Church Expectations" aria-selected="true" class="nav-link active">Church Expectations</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-9-2" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Connection Factors" aria-selected="false" class="nav-link">Connection Factors</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-9-3" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Music Styles" aria-selected="false" class="nav-link">Music Styles</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-9-4" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Church Priorities" aria-selected="false" class="nav-link">Church Priorities</a></li></ul></div>
+
+
+
+
+<div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden html-fill-item html-fill-container">
+
+</div>
+<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-9"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-9-1"><div class="card-body html-fill-item html-fill-container" data-title="Church Expectations">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="plotly html-widget html-fill-item html-fill-container" id="htmlwidget-58c439722fc7d1e4942f" style="width:100%;height:406px;"></div>
+<script type="application/json" data-for="htmlwidget-58c439722fc7d1e4942f">{"x":{"visdat":{"1b3453591742":["function () ","plotlyVisDat"]},"cur_data":"1b3453591742","attrs":{"1b3453591742":{"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"histogram"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"tickangle":45,"title":"response","categoryorder":"array","categoryarray":["Worship","Spiritual Message","Fellowship","Other (Please describe)","Sunday School/Student Fellowship","Coffee hour/Refreshments","Hearing about church activities",null],"type":"category"},"yaxis":{"domain":[0,1],"automargin":true,"title":"Count"},"dragmode":"zoom","hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"staticPlot":true},"data":[{"x":["Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Worship","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Spiritual Message","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Fellowship","Other (Please describe)","Other (Please describe)","Other (Please describe)","Other (Please describe)","Other (Please describe)","Other (Please describe)","Other (Please describe)","Other (Please describe)","Other (Please describe)","Other (Please describe)","Other (Please describe)","Other (Please describe)","Other (Please describe)","Other (Please describe)","Other (Please describe)","Other (Please describe)","Sunday School/Student Fellowship","Sunday School/Student Fellowship","Sunday School/Student Fellowship","Sunday School/Student Fellowship","Sunday School/Student Fellowship","Sunday School/Student Fellowship","Sunday School/Student Fellowship","Sunday School/Student Fellowship","Sunday School/Student Fellowship","Sunday School/Student Fellowship","Sunday School/Student Fellowship","Sunday School/Student Fellowship","Sunday School/Student Fellowship","Sunday School/Student Fellowship","Sunday School/Student Fellowship","Coffee hour/Refreshments","Coffee hour/Refreshments","Coffee hour/Refreshments","Coffee hour/Refreshments","Coffee hour/Refreshments","Coffee hour/Refreshments","Coffee hour/Refreshments","Coffee hour/Refreshments","Coffee hour/Refreshments","Coffee hour/Refreshments","Coffee hour/Refreshments","Coffee hour/Refreshments","Coffee hour/Refreshments","Coffee hour/Refreshments","Hearing about church activities","Hearing about church activities","Hearing about church activities","Hearing about church activities","Hearing about church activities","Hearing about church activities","Hearing about church activities","Hearing about church activities","Hearing about church activities","Hearing about church activities","Hearing about church activities","Hearing about church activities","Hearing about church activities"],"type":"histogram","key":["R_64UkuuH1Ds25cDT","R_3v6BKrAzxDNwdrT","R_7dGTh8PZN2F2RH2","R_62m4OISVKnlCXL3","R_5myYhTxXtDq1U7l","R_1JVZFH3kjybQrgG","R_3e2UcPeADnICI5A","R_3CrzzpPsEXUaApz","R_6rGNuBlbms9Bd7M","R_7otBvuSXPK0wuTf","R_1l0iU2pZ2HRMSbs","R_6R8YBwtkyDeqdyb","R_1dv5WAxkCEzm1TM","R_5gZUAiqd4jOHnCL","R_178WY4rVATRPXSV","R_3CDvyioa8KTHbqG","R_1hGauCjUp7J6RuQ","R_5t2sTwI4tHkLAT7","R_5ojohYHc4vogqJw","R_30Y8Ap5FOUCwm1R","R_50U58I2nRaMPGj1","R_7oqcQ1aQlgZy97I","R_1MmbuE8IGbLDz6W","R_7H6JUBOtFfY3vN7","R_3QKvKaryvHdPKfg","R_572qIi1mir7REjq","R_3EreZcBPxCmRre9","R_7rIXnNgINiHily8","R_1VcI0fqnvFcO5d7","R_7tzKKTrTh5sKlJe","R_5IttVZEsOUdNOod","R_14iOyaKS2zpgcWB","R_7Envb7tk57iZ9sQ","R_7Ej4LrfPFK6cwDF","R_5z7uztvtFacRuIF","R_1BS0W9Xqw2q51g7","R_1GDLZsTm5zRei7v","R_3tpJV0mpixsqJW1","R_1qu2yUEC56rZmNj","R_1PTffYW9MMjNLQP","R_6LAP6k893XeUpsN","R_3E68JWpVIKwD5ci","R_3ij8fHLaKZrma6l","R_6sgKB6hng8W0RQ2","R_6UMcpsZv05ocBRD","R_76GxWVggwxMsq0F","R_3V5OCw9XINsJG0N","R_3IFpLxQBgREgWOm","R_11thiYQcpfDKmsh","R_7Rt2cqWoz69e7hr","R_5GO1Qdrxgcd5COp","R_624LvcU3uGxvyQz","R_7C5NjSTDju5hkZP","R_1eHBoL9vB8iARsR","R_5f40mmupkNftobv","R_14jDnqK80sBJVoM","R_6bAWelZpYxSfWql","R_7tGavkTqE2N3kPI","R_6608YHXctCZwegF","R_3itiuzc343xuN6u","R_3l9N6hPTxjo5dd9","R_6wzWp7zTu1Zsa0z","R_5bNITm2IqfssOGt","R_3wu7re6gejMYVH3","R_1LzMNFeY14AWh55","R_3e9ecdyuPheK04Q","R_7NdlhGtlyt7YUfv","R_7YgJ37dNiEkMVpT","R_64UkuuH1Ds25cDT","R_3v6BKrAzxDNwdrT","R_7dGTh8PZN2F2RH2","R_5myYhTxXtDq1U7l","R_3CrzzpPsEXUaApz","R_6rGNuBlbms9Bd7M","R_7otBvuSXPK0wuTf","R_6R8YBwtkyDeqdyb","R_1fW3aejsAZy3n4c","R_3CDvyioa8KTHbqG","R_5t2sTwI4tHkLAT7","R_5ojohYHc4vogqJw","R_30Y8Ap5FOUCwm1R","R_7oqcQ1aQlgZy97I","R_1MmbuE8IGbLDz6W","R_7H6JUBOtFfY3vN7","R_3QKvKaryvHdPKfg","R_572qIi1mir7REjq","R_3EreZcBPxCmRre9","R_3ek1sQwHtQz0IzC","R_1VcI0fqnvFcO5d7","R_1KUFFjJGHF7UhN3","R_5IttVZEsOUdNOod","R_5fm17LyEFULpPPh","R_6LZXCKo02cEaeSl","R_7Envb7tk57iZ9sQ","R_5z7uztvtFacRuIF","R_1BS0W9Xqw2q51g7","R_1GDLZsTm5zRei7v","R_3tpJV0mpixsqJW1","R_1qu2yUEC56rZmNj","R_1PTffYW9MMjNLQP","R_6LAP6k893XeUpsN","R_3E68JWpVIKwD5ci","R_6ZuUM6ZCPVeyJCV","R_3ij8fHLaKZrma6l","R_6sgKB6hng8W0RQ2","R_6UMcpsZv05ocBRD","R_76GxWVggwxMsq0F","R_5GO1Qdrxgcd5COp","R_624LvcU3uGxvyQz","R_7C5NjSTDju5hkZP","R_1eHBoL9vB8iARsR","R_14jDnqK80sBJVoM","R_6bAWelZpYxSfWql","R_7tGavkTqE2N3kPI","R_6608YHXctCZwegF","R_3itiuzc343xuN6u","R_3l9N6hPTxjo5dd9","R_6wzWp7zTu1Zsa0z","R_3wu7re6gejMYVH3","R_1LzMNFeY14AWh55","R_3e9ecdyuPheK04Q","R_7NdlhGtlyt7YUfv","R_7YgJ37dNiEkMVpT","R_6RVsujRNKTLa0Zl","R_7dGTh8PZN2F2RH2","R_5myYhTxXtDq1U7l","R_1JVZFH3kjybQrgG","R_6rGNuBlbms9Bd7M","R_7otBvuSXPK0wuTf","R_1l0iU2pZ2HRMSbs","R_6R8YBwtkyDeqdyb","R_1dv5WAxkCEzm1TM","R_5gZUAiqd4jOHnCL","R_178WY4rVATRPXSV","R_3CDvyioa8KTHbqG","R_5t2sTwI4tHkLAT7","R_5ojohYHc4vogqJw","R_50U58I2nRaMPGj1","R_7oqcQ1aQlgZy97I","R_1MmbuE8IGbLDz6W","R_7H6JUBOtFfY3vN7","R_572qIi1mir7REjq","R_3ek1sQwHtQz0IzC","R_7rIXnNgINiHily8","R_1VcI0fqnvFcO5d7","R_5IttVZEsOUdNOod","R_5fm17LyEFULpPPh","R_6LZXCKo02cEaeSl","R_14iOyaKS2zpgcWB","R_7Envb7tk57iZ9sQ","R_7Ej4LrfPFK6cwDF","R_1BS0W9Xqw2q51g7","R_1GDLZsTm5zRei7v","R_3E68JWpVIKwD5ci","R_6ZuUM6ZCPVeyJCV","R_6sgKB6hng8W0RQ2","R_76GxWVggwxMsq0F","R_3IFpLxQBgREgWOm","R_11thiYQcpfDKmsh","R_5GO1Qdrxgcd5COp","R_7C5NjSTDju5hkZP","R_1eHBoL9vB8iARsR","R_5f40mmupkNftobv","R_6s0u9GnjurSfOKP","R_14jDnqK80sBJVoM","R_6bAWelZpYxSfWql","R_7tGavkTqE2N3kPI","R_6608YHXctCZwegF","R_3itiuzc343xuN6u","R_6wzWp7zTu1Zsa0z","R_5bNITm2IqfssOGt","R_3wu7re6gejMYVH3","R_1LzMNFeY14AWh55","R_3e9ecdyuPheK04Q","R_7NdlhGtlyt7YUfv","R_7YgJ37dNiEkMVpT","R_64UkuuH1Ds25cDT","R_1hGauCjUp7J6RuQ","R_3EreZcBPxCmRre9","R_3ek1sQwHtQz0IzC","R_5IttVZEsOUdNOod","R_6LZXCKo02cEaeSl","R_5z7uztvtFacRuIF","R_1PTffYW9MMjNLQP","R_6LAP6k893XeUpsN","R_3ij8fHLaKZrma6l","R_5GO1Qdrxgcd5COp","R_7C5NjSTDju5hkZP","R_6bAWelZpYxSfWql","R_5bNITm2IqfssOGt","R_3wu7re6gejMYVH3","R_1LzMNFeY14AWh55","R_7dGTh8PZN2F2RH2","R_62m4OISVKnlCXL3","R_5myYhTxXtDq1U7l","R_6rGNuBlbms9Bd7M","R_7otBvuSXPK0wuTf","R_1l0iU2pZ2HRMSbs","R_1fW3aejsAZy3n4c","R_1dv5WAxkCEzm1TM","R_178WY4rVATRPXSV","R_5fm17LyEFULpPPh","R_1BS0W9Xqw2q51g7","R_1GDLZsTm5zRei7v","R_5f40mmupkNftobv","R_6bAWelZpYxSfWql","R_1LzMNFeY14AWh55","R_7dGTh8PZN2F2RH2","R_62m4OISVKnlCXL3","R_5myYhTxXtDq1U7l","R_1GDLZsTm5zRei7v","R_3E68JWpVIKwD5ci","R_76GxWVggwxMsq0F","R_1eHBoL9vB8iARsR","R_6bAWelZpYxSfWql","R_6608YHXctCZwegF","R_3itiuzc343xuN6u","R_3l9N6hPTxjo5dd9","R_5bNITm2IqfssOGt","R_3wu7re6gejMYVH3","R_1LzMNFeY14AWh55","R_7dGTh8PZN2F2RH2","R_5myYhTxXtDq1U7l","R_7otBvuSXPK0wuTf","R_7oqcQ1aQlgZy97I","R_7H6JUBOtFfY3vN7","R_572qIi1mir7REjq","R_5IttVZEsOUdNOod","R_1GDLZsTm5zRei7v","R_76GxWVggwxMsq0F","R_6bAWelZpYxSfWql","R_6608YHXctCZwegF","R_1LzMNFeY14AWh55","R_7YgJ37dNiEkMVpT"],"set":"long_survey","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","_isNestedKey":false,"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0,"ctGroups":["long_survey"]},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-9-2"><div class="card-body html-fill-item html-fill-container" data-title="Connection Factors">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="plotly html-widget html-fill-item html-fill-container" id="htmlwidget-6662e363523e53c3cca5" style="width:100%;height:406px;"></div>
+<script type="application/json" data-for="htmlwidget-6662e363523e53c3cca5">{"x":{"visdat":{"1b3464174016":["function () ","plotlyVisDat"]},"cur_data":"1b3464174016","attrs":{"1b3464174016":{"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"histogram"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"tickangle":45,"title":"response","categoryorder":"array","categoryarray":["Bible Studies","Soup Suppers","Congregational Meals","Volunteering for service projects","Music groups","Outreach from staff/members","Sunday School/Confirmation/Youth Programming","Other","Family Events","International English Classes",null],"type":"category"},"yaxis":{"domain":[0,1],"automargin":true,"title":"Count"},"dragmode":"zoom","hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"staticPlot":true},"data":[{"x":["Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Soup Suppers","Soup Suppers","Soup Suppers","Soup Suppers","Soup Suppers","Soup Suppers","Soup Suppers","Soup Suppers","Soup Suppers","Soup Suppers","Soup Suppers","Soup Suppers","Soup Suppers","Soup Suppers","Soup Suppers","Soup Suppers","Soup Suppers","Soup Suppers","Soup Suppers","Soup Suppers","Soup Suppers","Soup Suppers","Soup Suppers","Soup Suppers","Soup Suppers","Soup Suppers","Soup Suppers","Soup Suppers","Soup Suppers","Soup Suppers","Congregational Meals","Congregational Meals","Congregational Meals","Congregational Meals","Congregational Meals","Congregational Meals","Congregational Meals","Congregational Meals","Congregational Meals","Congregational Meals","Congregational Meals","Congregational Meals","Congregational Meals","Congregational Meals","Congregational Meals","Congregational Meals","Congregational Meals","Congregational Meals","Congregational Meals","Congregational Meals","Congregational Meals","Congregational Meals","Congregational Meals","Congregational Meals","Congregational Meals","Congregational Meals","Congregational Meals","Volunteering for service projects","Volunteering for service projects","Volunteering for service projects","Volunteering for service projects","Volunteering for service projects","Volunteering for service projects","Volunteering for service projects","Volunteering for service projects","Volunteering for service projects","Volunteering for service projects","Volunteering for service projects","Volunteering for service projects","Volunteering for service projects","Volunteering for service projects","Volunteering for service projects","Volunteering for service projects","Volunteering for service projects","Volunteering for service projects","Volunteering for service projects","Volunteering for service projects","Volunteering for service projects","Volunteering for service projects","Volunteering for service projects","Music groups","Music groups","Music groups","Music groups","Music groups","Music groups","Music groups","Music groups","Music groups","Music groups","Music groups","Music groups","Music groups","Music groups","Music groups","Music groups","Music groups","Music groups","Outreach from staff/members","Outreach from staff/members","Outreach from staff/members","Outreach from staff/members","Outreach from staff/members","Outreach from staff/members","Outreach from staff/members","Outreach from staff/members","Outreach from staff/members","Outreach from staff/members","Outreach from staff/members","Outreach from staff/members","Outreach from staff/members","Outreach from staff/members","Outreach from staff/members","Outreach from staff/members","Sunday School/Confirmation/Youth Programming","Sunday School/Confirmation/Youth Programming","Sunday School/Confirmation/Youth Programming","Sunday School/Confirmation/Youth Programming","Sunday School/Confirmation/Youth Programming","Sunday School/Confirmation/Youth Programming","Sunday School/Confirmation/Youth Programming","Sunday School/Confirmation/Youth Programming","Sunday School/Confirmation/Youth Programming","Sunday School/Confirmation/Youth Programming","Sunday School/Confirmation/Youth Programming","Sunday School/Confirmation/Youth Programming","Sunday School/Confirmation/Youth Programming","Sunday School/Confirmation/Youth Programming","Sunday School/Confirmation/Youth Programming","Sunday School/Confirmation/Youth Programming","Other","Other","Other","Other","Other","Other","Other","Other","Other","Other","Other","Other","Family Events","Family Events","Family Events","Family Events","Family Events","Family Events","Family Events","Family Events","Family Events","Family Events","Family Events","International English Classes","International English Classes","International English Classes"],"type":"histogram","key":["R_3v6BKrAzxDNwdrT","R_3e2UcPeADnICI5A","R_3CrzzpPsEXUaApz","R_6rGNuBlbms9Bd7M","R_7otBvuSXPK0wuTf","R_6R8YBwtkyDeqdyb","R_1fW3aejsAZy3n4c","R_1dv5WAxkCEzm1TM","R_1hGauCjUp7J6RuQ","R_5t2sTwI4tHkLAT7","R_5ojohYHc4vogqJw","R_1MmbuE8IGbLDz6W","R_5fm17LyEFULpPPh","R_6LZXCKo02cEaeSl","R_14iOyaKS2zpgcWB","R_1GDLZsTm5zRei7v","R_3tpJV0mpixsqJW1","R_6LAP6k893XeUpsN","R_3E68JWpVIKwD5ci","R_6sgKB6hng8W0RQ2","R_7Rt2cqWoz69e7hr","R_7C5NjSTDju5hkZP","R_1eHBoL9vB8iARsR","R_5f40mmupkNftobv","R_6bAWelZpYxSfWql","R_7tGavkTqE2N3kPI","R_6608YHXctCZwegF","R_3itiuzc343xuN6u","R_5bNITm2IqfssOGt","R_3wu7re6gejMYVH3","R_1LzMNFeY14AWh55","R_3e9ecdyuPheK04Q","R_1JVZFH3kjybQrgG","R_3e2UcPeADnICI5A","R_6rGNuBlbms9Bd7M","R_6R8YBwtkyDeqdyb","R_1fW3aejsAZy3n4c","R_3CDvyioa8KTHbqG","R_5ojohYHc4vogqJw","R_7H6JUBOtFfY3vN7","R_572qIi1mir7REjq","R_3EreZcBPxCmRre9","R_3ek1sQwHtQz0IzC","R_5IttVZEsOUdNOod","R_5z7uztvtFacRuIF","R_6LAP6k893XeUpsN","R_3E68JWpVIKwD5ci","R_6ZuUM6ZCPVeyJCV","R_6sgKB6hng8W0RQ2","R_7C5NjSTDju5hkZP","R_1eHBoL9vB8iARsR","R_14jDnqK80sBJVoM","R_6bAWelZpYxSfWql","R_7tGavkTqE2N3kPI","R_6608YHXctCZwegF","R_3itiuzc343xuN6u","R_3l9N6hPTxjo5dd9","R_6wzWp7zTu1Zsa0z","R_5bNITm2IqfssOGt","R_1LzMNFeY14AWh55","R_3e9ecdyuPheK04Q","R_7NdlhGtlyt7YUfv","R_7dGTh8PZN2F2RH2","R_62m4OISVKnlCXL3","R_5myYhTxXtDq1U7l","R_1JVZFH3kjybQrgG","R_6rGNuBlbms9Bd7M","R_6R8YBwtkyDeqdyb","R_1fW3aejsAZy3n4c","R_178WY4rVATRPXSV","R_3CDvyioa8KTHbqG","R_1MmbuE8IGbLDz6W","R_7H6JUBOtFfY3vN7","R_572qIi1mir7REjq","R_5IttVZEsOUdNOod","R_5fm17LyEFULpPPh","R_6LZXCKo02cEaeSl","R_6LAP6k893XeUpsN","R_3E68JWpVIKwD5ci","R_6ZuUM6ZCPVeyJCV","R_3V5OCw9XINsJG0N","R_7Rt2cqWoz69e7hr","R_7C5NjSTDju5hkZP","R_1eHBoL9vB8iARsR","R_6bAWelZpYxSfWql","R_7tGavkTqE2N3kPI","R_6608YHXctCZwegF","R_3itiuzc343xuN6u","R_3wu7re6gejMYVH3","R_6RVsujRNKTLa0Zl","R_3v6BKrAzxDNwdrT","R_3e2UcPeADnICI5A","R_3CrzzpPsEXUaApz","R_6R8YBwtkyDeqdyb","R_5gZUAiqd4jOHnCL","R_178WY4rVATRPXSV","R_30Y8Ap5FOUCwm1R","R_1MmbuE8IGbLDz6W","R_7H6JUBOtFfY3vN7","R_3ek1sQwHtQz0IzC","R_1VcI0fqnvFcO5d7","R_7tzKKTrTh5sKlJe","R_1KUFFjJGHF7UhN3","R_14iOyaKS2zpgcWB","R_6LAP6k893XeUpsN","R_6sgKB6hng8W0RQ2","R_7C5NjSTDju5hkZP","R_6s0u9GnjurSfOKP","R_7tGavkTqE2N3kPI","R_3itiuzc343xuN6u","R_3wu7re6gejMYVH3","R_7YgJ37dNiEkMVpT","R_64UkuuH1Ds25cDT","R_1JVZFH3kjybQrgG","R_6rGNuBlbms9Bd7M","R_178WY4rVATRPXSV","R_5ojohYHc4vogqJw","R_3EreZcBPxCmRre9","R_1VcI0fqnvFcO5d7","R_5fm17LyEFULpPPh","R_6LZXCKo02cEaeSl","R_3ij8fHLaKZrma6l","R_6sgKB6hng8W0RQ2","R_7C5NjSTDju5hkZP","R_5f40mmupkNftobv","R_6bAWelZpYxSfWql","R_3l9N6hPTxjo5dd9","R_5bNITm2IqfssOGt","R_3wu7re6gejMYVH3","R_1LzMNFeY14AWh55","R_3e2UcPeADnICI5A","R_3CrzzpPsEXUaApz","R_6rGNuBlbms9Bd7M","R_1fW3aejsAZy3n4c","R_30Y8Ap5FOUCwm1R","R_50U58I2nRaMPGj1","R_3ek1sQwHtQz0IzC","R_6LZXCKo02cEaeSl","R_76GxWVggwxMsq0F","R_3V5OCw9XINsJG0N","R_3IFpLxQBgREgWOm","R_11thiYQcpfDKmsh","R_6bAWelZpYxSfWql","R_3itiuzc343xuN6u","R_1LzMNFeY14AWh55","R_7NdlhGtlyt7YUfv","R_7dGTh8PZN2F2RH2","R_62m4OISVKnlCXL3","R_5myYhTxXtDq1U7l","R_1JVZFH3kjybQrgG","R_3e2UcPeADnICI5A","R_3CrzzpPsEXUaApz","R_7otBvuSXPK0wuTf","R_1l0iU2pZ2HRMSbs","R_6R8YBwtkyDeqdyb","R_5gZUAiqd4jOHnCL","R_178WY4rVATRPXSV","R_1VcI0fqnvFcO5d7","R_7Envb7tk57iZ9sQ","R_1BS0W9Xqw2q51g7","R_1GDLZsTm5zRei7v","R_5f40mmupkNftobv","R_62m4OISVKnlCXL3","R_5gZUAiqd4jOHnCL","R_178WY4rVATRPXSV","R_7H6JUBOtFfY3vN7","R_3EreZcBPxCmRre9","R_5z7uztvtFacRuIF","R_3IFpLxQBgREgWOm","R_11thiYQcpfDKmsh","R_624LvcU3uGxvyQz","R_1eHBoL9vB8iARsR","R_6bAWelZpYxSfWql","R_7NdlhGtlyt7YUfv","R_6RVsujRNKTLa0Zl","R_7dGTh8PZN2F2RH2","R_5myYhTxXtDq1U7l","R_3CrzzpPsEXUaApz","R_6R8YBwtkyDeqdyb","R_1fW3aejsAZy3n4c","R_178WY4rVATRPXSV","R_1GDLZsTm5zRei7v","R_7Rt2cqWoz69e7hr","R_5f40mmupkNftobv","R_6bAWelZpYxSfWql","R_624LvcU3uGxvyQz","R_3wu7re6gejMYVH3","R_3e9ecdyuPheK04Q"],"set":"long_survey","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","_isNestedKey":false,"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0,"ctGroups":["long_survey"]},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-9-3"><div class="card-body html-fill-item html-fill-container" data-title="Music Styles">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="plotly html-widget html-fill-item html-fill-container" id="htmlwidget-10fc4dbda56a361e9e24" style="width:100%;height:406px;"></div>
+<script type="application/json" data-for="htmlwidget-10fc4dbda56a361e9e24">{"x":{"visdat":{"1b3433495f41":["function () ","plotlyVisDat"]},"cur_data":"1b3433495f41","attrs":{"1b3433495f41":{"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"histogram"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"tickangle":45,"title":"response","categoryorder":"array","categoryarray":["Other","Traditional organ music","Instrumental music","Contemporary music","Live performances",null],"type":"category"},"yaxis":{"domain":[0,1],"automargin":true,"title":"Count"},"dragmode":"zoom","hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"staticPlot":true},"data":[{"x":["Other","Other","Other","Other","Other","Other","Other","Other","Other","Other","Other","Other","Other","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Traditional organ music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Instrumental music","Contemporary music","Contemporary music","Contemporary music","Contemporary music","Contemporary music","Contemporary music","Contemporary music","Contemporary music","Contemporary music","Contemporary music","Contemporary music","Contemporary music","Contemporary music","Contemporary music","Contemporary music","Contemporary music","Contemporary music","Contemporary music","Contemporary music","Contemporary music","Contemporary music","Contemporary music","Contemporary music","Contemporary music","Contemporary music","Contemporary music","Contemporary music","Contemporary music","Contemporary music","Contemporary music","Contemporary music","Live performances","Live performances","Live performances","Live performances","Live performances","Live performances","Live performances","Live performances","Live performances","Live performances","Live performances","Live performances","Live performances","Live performances","Live performances","Live performances","Live performances","Live performances","Live performances","Live performances","Live performances","Live performances","Live performances","Live performances","Live performances","Live performances","Live performances","Live performances","Live performances"],"type":"histogram","key":["R_3CrzzpPsEXUaApz","R_7H6JUBOtFfY3vN7","R_5z7uztvtFacRuIF","R_3tpJV0mpixsqJW1","R_1PTffYW9MMjNLQP","R_3E68JWpVIKwD5ci","R_6ZuUM6ZCPVeyJCV","R_7C5NjSTDju5hkZP","R_1eHBoL9vB8iARsR","R_5f40mmupkNftobv","R_6bAWelZpYxSfWql","R_7tGavkTqE2N3kPI","R_5bNITm2IqfssOGt","R_64UkuuH1Ds25cDT","R_6RVsujRNKTLa0Zl","R_3v6BKrAzxDNwdrT","R_7dGTh8PZN2F2RH2","R_62m4OISVKnlCXL3","R_5myYhTxXtDq1U7l","R_1JVZFH3kjybQrgG","R_3e2UcPeADnICI5A","R_3CrzzpPsEXUaApz","R_6rGNuBlbms9Bd7M","R_7otBvuSXPK0wuTf","R_1l0iU2pZ2HRMSbs","R_6R8YBwtkyDeqdyb","R_1fW3aejsAZy3n4c","R_1dv5WAxkCEzm1TM","R_5gZUAiqd4jOHnCL","R_178WY4rVATRPXSV","R_3CDvyioa8KTHbqG","R_1hGauCjUp7J6RuQ","R_5t2sTwI4tHkLAT7","R_5ojohYHc4vogqJw","R_30Y8Ap5FOUCwm1R","R_50U58I2nRaMPGj1","R_7oqcQ1aQlgZy97I","R_1MmbuE8IGbLDz6W","R_7H6JUBOtFfY3vN7","R_3QKvKaryvHdPKfg","R_572qIi1mir7REjq","R_3EreZcBPxCmRre9","R_3ek1sQwHtQz0IzC","R_7rIXnNgINiHily8","R_1VcI0fqnvFcO5d7","R_7tzKKTrTh5sKlJe","R_5IttVZEsOUdNOod","R_5fm17LyEFULpPPh","R_6LZXCKo02cEaeSl","R_14iOyaKS2zpgcWB","R_7Envb7tk57iZ9sQ","R_7Ej4LrfPFK6cwDF","R_5z7uztvtFacRuIF","R_1BS0W9Xqw2q51g7","R_1GDLZsTm5zRei7v","R_1qu2yUEC56rZmNj","R_1PTffYW9MMjNLQP","R_6LAP6k893XeUpsN","R_3ij8fHLaKZrma6l","R_6sgKB6hng8W0RQ2","R_6UMcpsZv05ocBRD","R_76GxWVggwxMsq0F","R_3V5OCw9XINsJG0N","R_3IFpLxQBgREgWOm","R_11thiYQcpfDKmsh","R_7Rt2cqWoz69e7hr","R_5GO1Qdrxgcd5COp","R_624LvcU3uGxvyQz","R_7C5NjSTDju5hkZP","R_1eHBoL9vB8iARsR","R_5f40mmupkNftobv","R_6s0u9GnjurSfOKP","R_14jDnqK80sBJVoM","R_6bAWelZpYxSfWql","R_7tGavkTqE2N3kPI","R_6608YHXctCZwegF","R_3itiuzc343xuN6u","R_3l9N6hPTxjo5dd9","R_6wzWp7zTu1Zsa0z","R_5bNITm2IqfssOGt","R_3wu7re6gejMYVH3","R_1LzMNFeY14AWh55","R_3e9ecdyuPheK04Q","R_7NdlhGtlyt7YUfv","R_7YgJ37dNiEkMVpT","R_64UkuuH1Ds25cDT","R_6RVsujRNKTLa0Zl","R_7dGTh8PZN2F2RH2","R_62m4OISVKnlCXL3","R_5myYhTxXtDq1U7l","R_1JVZFH3kjybQrgG","R_3CrzzpPsEXUaApz","R_6rGNuBlbms9Bd7M","R_1l0iU2pZ2HRMSbs","R_6R8YBwtkyDeqdyb","R_1fW3aejsAZy3n4c","R_5gZUAiqd4jOHnCL","R_178WY4rVATRPXSV","R_1hGauCjUp7J6RuQ","R_5t2sTwI4tHkLAT7","R_5ojohYHc4vogqJw","R_7oqcQ1aQlgZy97I","R_1MmbuE8IGbLDz6W","R_7H6JUBOtFfY3vN7","R_3QKvKaryvHdPKfg","R_572qIi1mir7REjq","R_3EreZcBPxCmRre9","R_3ek1sQwHtQz0IzC","R_7tzKKTrTh5sKlJe","R_5IttVZEsOUdNOod","R_5fm17LyEFULpPPh","R_6LZXCKo02cEaeSl","R_14iOyaKS2zpgcWB","R_7Ej4LrfPFK6cwDF","R_5z7uztvtFacRuIF","R_1GDLZsTm5zRei7v","R_1qu2yUEC56rZmNj","R_1PTffYW9MMjNLQP","R_6LAP6k893XeUpsN","R_3ij8fHLaKZrma6l","R_6sgKB6hng8W0RQ2","R_76GxWVggwxMsq0F","R_3V5OCw9XINsJG0N","R_3IFpLxQBgREgWOm","R_7Rt2cqWoz69e7hr","R_7C5NjSTDju5hkZP","R_1eHBoL9vB8iARsR","R_5f40mmupkNftobv","R_6bAWelZpYxSfWql","R_7tGavkTqE2N3kPI","R_6608YHXctCZwegF","R_3itiuzc343xuN6u","R_6wzWp7zTu1Zsa0z","R_5bNITm2IqfssOGt","R_3wu7re6gejMYVH3","R_1LzMNFeY14AWh55","R_7YgJ37dNiEkMVpT","R_7dGTh8PZN2F2RH2","R_5myYhTxXtDq1U7l","R_3CrzzpPsEXUaApz","R_6rGNuBlbms9Bd7M","R_1fW3aejsAZy3n4c","R_30Y8Ap5FOUCwm1R","R_7oqcQ1aQlgZy97I","R_7H6JUBOtFfY3vN7","R_3QKvKaryvHdPKfg","R_572qIi1mir7REjq","R_3EreZcBPxCmRre9","R_7tzKKTrTh5sKlJe","R_1KUFFjJGHF7UhN3","R_5IttVZEsOUdNOod","R_6LZXCKo02cEaeSl","R_7Envb7tk57iZ9sQ","R_7Ej4LrfPFK6cwDF","R_1qu2yUEC56rZmNj","R_6ZuUM6ZCPVeyJCV","R_6sgKB6hng8W0RQ2","R_6UMcpsZv05ocBRD","R_76GxWVggwxMsq0F","R_3IFpLxQBgREgWOm","R_11thiYQcpfDKmsh","R_7Rt2cqWoz69e7hr","R_6bAWelZpYxSfWql","R_7tGavkTqE2N3kPI","R_6608YHXctCZwegF","R_6wzWp7zTu1Zsa0z","R_3wu7re6gejMYVH3","R_7YgJ37dNiEkMVpT","R_3v6BKrAzxDNwdrT","R_7dGTh8PZN2F2RH2","R_62m4OISVKnlCXL3","R_5myYhTxXtDq1U7l","R_3CrzzpPsEXUaApz","R_5gZUAiqd4jOHnCL","R_178WY4rVATRPXSV","R_7oqcQ1aQlgZy97I","R_1MmbuE8IGbLDz6W","R_7H6JUBOtFfY3vN7","R_3QKvKaryvHdPKfg","R_572qIi1mir7REjq","R_7tzKKTrTh5sKlJe","R_5IttVZEsOUdNOod","R_1PTffYW9MMjNLQP","R_6sgKB6hng8W0RQ2","R_76GxWVggwxMsq0F","R_3V5OCw9XINsJG0N","R_7Rt2cqWoz69e7hr","R_7C5NjSTDju5hkZP","R_1eHBoL9vB8iARsR","R_6bAWelZpYxSfWql","R_6608YHXctCZwegF","R_3itiuzc343xuN6u","R_3l9N6hPTxjo5dd9","R_6wzWp7zTu1Zsa0z","R_5bNITm2IqfssOGt","R_1LzMNFeY14AWh55","R_7YgJ37dNiEkMVpT"],"set":"long_survey","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","_isNestedKey":false,"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0,"ctGroups":["long_survey"]},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-9-4"><div class="card-body html-fill-item html-fill-container" data-title="Church Priorities">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="plotly html-widget html-fill-item html-fill-container" id="htmlwidget-c5de895f1e6e0eeb1131" style="width:100%;height:406px;"></div>
+<script type="application/json" data-for="htmlwidget-c5de895f1e6e0eeb1131">{"x":{"visdat":{"1b341cbd2ca":["function () ","plotlyVisDat"]},"cur_data":"1b341cbd2ca","attrs":{"1b341cbd2ca":{"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"histogram"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"tickangle":45,"title":"response","categoryorder":"array","categoryarray":["Sunday School Programming","Youth Programming","Young Family Programming","Campus Ministry","Young adult ministry","Bible Studies","Ministry to international students and families","Other (please explain)","Ministry to retirees","Mission work/support","Outreach",null],"type":"category"},"yaxis":{"domain":[0,1],"automargin":true,"title":"Count"},"dragmode":"zoom","hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"staticPlot":true},"data":[{"x":["Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Sunday School Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Youth Programming","Young Family Programming","Young Family Programming","Young Family Programming","Young Family Programming","Young Family Programming","Young Family Programming","Young Family Programming","Young Family Programming","Young Family Programming","Young Family Programming","Young Family Programming","Young Family Programming","Young Family Programming","Young Family Programming","Young Family Programming","Young Family Programming","Young Family Programming","Young Family Programming","Young Family Programming","Young Family Programming","Young Family Programming","Young Family Programming","Young Family Programming","Young Family Programming","Young Family Programming","Young Family Programming","Young Family Programming","Young Family Programming","Young Family Programming","Young Family Programming","Young Family Programming","Campus Ministry","Campus Ministry","Campus Ministry","Campus Ministry","Campus Ministry","Campus Ministry","Campus Ministry","Campus Ministry","Campus Ministry","Campus Ministry","Campus Ministry","Campus Ministry","Campus Ministry","Campus Ministry","Campus Ministry","Campus Ministry","Campus Ministry","Campus Ministry","Campus Ministry","Campus Ministry","Campus Ministry","Young adult ministry","Young adult ministry","Young adult ministry","Young adult ministry","Young adult ministry","Young adult ministry","Young adult ministry","Young adult ministry","Young adult ministry","Young adult ministry","Young adult ministry","Young adult ministry","Young adult ministry","Young adult ministry","Young adult ministry","Young adult ministry","Young adult ministry","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Bible Studies","Ministry to international students and families","Ministry to international students and families","Ministry to international students and families","Ministry to international students and families","Ministry to international students and families","Ministry to international students and families","Ministry to international students and families","Ministry to international students and families","Ministry to international students and families","Ministry to international students and families","Ministry to international students and families","Ministry to international students and families","Ministry to international students and families","Ministry to international students and families","Ministry to international students and families","Other (please explain)","Other (please explain)","Other (please explain)","Other (please explain)","Other (please explain)","Other (please explain)","Other (please explain)","Other (please explain)","Other (please explain)","Other (please explain)","Other (please explain)","Other (please explain)","Ministry to retirees","Ministry to retirees","Ministry to retirees","Ministry to retirees","Ministry to retirees","Ministry to retirees","Ministry to retirees","Ministry to retirees","Ministry to retirees","Ministry to retirees","Ministry to retirees","Mission work/support","Mission work/support","Mission work/support","Mission work/support","Mission work/support","Mission work/support","Mission work/support","Mission work/support","Outreach","Outreach","Outreach","Outreach","Outreach"],"type":"histogram","key":["R_3v6BKrAzxDNwdrT","R_62m4OISVKnlCXL3","R_5myYhTxXtDq1U7l","R_1JVZFH3kjybQrgG","R_3e2UcPeADnICI5A","R_3CrzzpPsEXUaApz","R_1l0iU2pZ2HRMSbs","R_1fW3aejsAZy3n4c","R_5gZUAiqd4jOHnCL","R_178WY4rVATRPXSV","R_5ojohYHc4vogqJw","R_7H6JUBOtFfY3vN7","R_3EreZcBPxCmRre9","R_3ek1sQwHtQz0IzC","R_7rIXnNgINiHily8","R_1VcI0fqnvFcO5d7","R_7tzKKTrTh5sKlJe","R_14iOyaKS2zpgcWB","R_1BS0W9Xqw2q51g7","R_1GDLZsTm5zRei7v","R_3tpJV0mpixsqJW1","R_6LAP6k893XeUpsN","R_6sgKB6hng8W0RQ2","R_3V5OCw9XINsJG0N","R_6s0u9GnjurSfOKP","R_14jDnqK80sBJVoM","R_6bAWelZpYxSfWql","R_7tGavkTqE2N3kPI","R_3itiuzc343xuN6u","R_5bNITm2IqfssOGt","R_3e9ecdyuPheK04Q","R_7NdlhGtlyt7YUfv","R_7YgJ37dNiEkMVpT","R_3v6BKrAzxDNwdrT","R_5myYhTxXtDq1U7l","R_1JVZFH3kjybQrgG","R_3e2UcPeADnICI5A","R_3CrzzpPsEXUaApz","R_5gZUAiqd4jOHnCL","R_178WY4rVATRPXSV","R_5t2sTwI4tHkLAT7","R_50U58I2nRaMPGj1","R_1MmbuE8IGbLDz6W","R_7H6JUBOtFfY3vN7","R_3ek1sQwHtQz0IzC","R_7rIXnNgINiHily8","R_1VcI0fqnvFcO5d7","R_1KUFFjJGHF7UhN3","R_6LZXCKo02cEaeSl","R_14iOyaKS2zpgcWB","R_7Ej4LrfPFK6cwDF","R_1BS0W9Xqw2q51g7","R_1GDLZsTm5zRei7v","R_3tpJV0mpixsqJW1","R_6LAP6k893XeUpsN","R_3E68JWpVIKwD5ci","R_76GxWVggwxMsq0F","R_3V5OCw9XINsJG0N","R_624LvcU3uGxvyQz","R_1eHBoL9vB8iARsR","R_6s0u9GnjurSfOKP","R_5bNITm2IqfssOGt","R_3e9ecdyuPheK04Q","R_7NdlhGtlyt7YUfv","R_7YgJ37dNiEkMVpT","R_6RVsujRNKTLa0Zl","R_3v6BKrAzxDNwdrT","R_5myYhTxXtDq1U7l","R_1JVZFH3kjybQrgG","R_3CrzzpPsEXUaApz","R_1l0iU2pZ2HRMSbs","R_6R8YBwtkyDeqdyb","R_1fW3aejsAZy3n4c","R_5gZUAiqd4jOHnCL","R_178WY4rVATRPXSV","R_7H6JUBOtFfY3vN7","R_3EreZcBPxCmRre9","R_7rIXnNgINiHily8","R_1VcI0fqnvFcO5d7","R_7tzKKTrTh5sKlJe","R_5fm17LyEFULpPPh","R_7Ej4LrfPFK6cwDF","R_6ZuUM6ZCPVeyJCV","R_3ij8fHLaKZrma6l","R_6sgKB6hng8W0RQ2","R_76GxWVggwxMsq0F","R_3V5OCw9XINsJG0N","R_3IFpLxQBgREgWOm","R_11thiYQcpfDKmsh","R_7Rt2cqWoz69e7hr","R_6s0u9GnjurSfOKP","R_6608YHXctCZwegF","R_5bNITm2IqfssOGt","R_1LzMNFeY14AWh55","R_3e9ecdyuPheK04Q","R_7YgJ37dNiEkMVpT","R_64UkuuH1Ds25cDT","R_6RVsujRNKTLa0Zl","R_1dv5WAxkCEzm1TM","R_1hGauCjUp7J6RuQ","R_5t2sTwI4tHkLAT7","R_7oqcQ1aQlgZy97I","R_1MmbuE8IGbLDz6W","R_1KUFFjJGHF7UhN3","R_6LZXCKo02cEaeSl","R_5z7uztvtFacRuIF","R_1GDLZsTm5zRei7v","R_3tpJV0mpixsqJW1","R_6LAP6k893XeUpsN","R_3E68JWpVIKwD5ci","R_3IFpLxQBgREgWOm","R_11thiYQcpfDKmsh","R_7Rt2cqWoz69e7hr","R_624LvcU3uGxvyQz","R_7tGavkTqE2N3kPI","R_6608YHXctCZwegF","R_3itiuzc343xuN6u","R_64UkuuH1Ds25cDT","R_62m4OISVKnlCXL3","R_1dv5WAxkCEzm1TM","R_50U58I2nRaMPGj1","R_1MmbuE8IGbLDz6W","R_3QKvKaryvHdPKfg","R_3ek1sQwHtQz0IzC","R_7tzKKTrTh5sKlJe","R_1KUFFjJGHF7UhN3","R_5fm17LyEFULpPPh","R_14iOyaKS2zpgcWB","R_7Ej4LrfPFK6cwDF","R_3ij8fHLaKZrma6l","R_6UMcpsZv05ocBRD","R_3V5OCw9XINsJG0N","R_11thiYQcpfDKmsh","R_6608YHXctCZwegF","R_64UkuuH1Ds25cDT","R_3e2UcPeADnICI5A","R_3CrzzpPsEXUaApz","R_1l0iU2pZ2HRMSbs","R_6R8YBwtkyDeqdyb","R_1fW3aejsAZy3n4c","R_178WY4rVATRPXSV","R_3CDvyioa8KTHbqG","R_5ojohYHc4vogqJw","R_572qIi1mir7REjq","R_3EreZcBPxCmRre9","R_1BS0W9Xqw2q51g7","R_1GDLZsTm5zRei7v","R_3wu7re6gejMYVH3","R_1LzMNFeY14AWh55","R_7YgJ37dNiEkMVpT","R_6RVsujRNKTLa0Zl","R_62m4OISVKnlCXL3","R_3CrzzpPsEXUaApz","R_1hGauCjUp7J6RuQ","R_7oqcQ1aQlgZy97I","R_1MmbuE8IGbLDz6W","R_3QKvKaryvHdPKfg","R_6LZXCKo02cEaeSl","R_5z7uztvtFacRuIF","R_6LAP6k893XeUpsN","R_6sgKB6hng8W0RQ2","R_624LvcU3uGxvyQz","R_6bAWelZpYxSfWql","R_7tGavkTqE2N3kPI","R_3itiuzc343xuN6u","R_3CrzzpPsEXUaApz","R_6rGNuBlbms9Bd7M","R_1l0iU2pZ2HRMSbs","R_5gZUAiqd4jOHnCL","R_178WY4rVATRPXSV","R_572qIi1mir7REjq","R_3EreZcBPxCmRre9","R_7Envb7tk57iZ9sQ","R_6LAP6k893XeUpsN","R_3itiuzc343xuN6u","R_3l9N6hPTxjo5dd9","R_7YgJ37dNiEkMVpT","R_3CrzzpPsEXUaApz","R_5gZUAiqd4jOHnCL","R_3CDvyioa8KTHbqG","R_5t2sTwI4tHkLAT7","R_6UMcpsZv05ocBRD","R_3IFpLxQBgREgWOm","R_3l9N6hPTxjo5dd9","R_6wzWp7zTu1Zsa0z","R_3wu7re6gejMYVH3","R_1LzMNFeY14AWh55","R_7NdlhGtlyt7YUfv","R_3CrzzpPsEXUaApz","R_6R8YBwtkyDeqdyb","R_7oqcQ1aQlgZy97I","R_7Envb7tk57iZ9sQ","R_5z7uztvtFacRuIF","R_7Rt2cqWoz69e7hr","R_3wu7re6gejMYVH3","R_7YgJ37dNiEkMVpT","R_64UkuuH1Ds25cDT","R_5ojohYHc4vogqJw","R_5fm17LyEFULpPPh","R_11thiYQcpfDKmsh","R_3wu7re6gejMYVH3"],"set":"long_survey","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","_isNestedKey":false,"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0,"ctGroups":["long_survey"]},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div></div></div><bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+</div>
+
+
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /container fluid -->
+
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (_event) {
+  if (window.bslib.Card) {
+    window.bslib.Card.initializeAllCards();
+  }
+}); 
+</script>
+  
+
+
+
+</body></html>
