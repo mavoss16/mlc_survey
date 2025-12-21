@@ -332,6 +332,7 @@ navset_bar(
       ),
       tags$p("Number of Respondents (Filtered): ", inline_count_text(shared_long, unique_by = "response_id")),
       navset_tab(
+        selected = "Church Expectations",
         nav_panel(
           "Church Expectations",
           plot_ly(shared_church_exp, 
@@ -413,48 +414,18 @@ navset_bar(
 
 ```{r}
 #| echo: false
-
-# tags$script(HTML("
-#   document.addEventListener('DOMContentLoaded', function() {
-#     // Find the active tab link and trigger a click
-#     var activeTab = document.querySelector('.navbar-nav li.active a');
-#     if (activeTab && !activeTab.classList.contains('active')) {
-#       activeTab.click();
-#     }
-#   });
-# "))
-
-# tags$script(HTML("
-#   window.addEventListener('load', function() {
-#     // Force the first tab to be properly activated
-#     var firstTabPane = document.querySelector('[data-value=\"Respondent Overview\"]');
-#     if (firstTabPane && !firstTabPane.classList.contains('active')) {
-#       // Remove active from any other panes
-#       document.querySelectorAll('.tab-pane.active').forEach(function(pane) {
-#         pane.classList.remove('active');
-#       });
-#       // Add active to the correct pane
-#       firstTabPane.classList.add('active');
-#     }
-#   });
-# "))
-
-#| echo: false
 tags$script(HTML("
   window.addEventListener('load', function() {
     setTimeout(function() {
-      // Ensure correct tab pane is visible
+      // Handle main tabs
       var firstTabPane = document.querySelector('.tab-pane[data-value=\"Respondent Overview\"]');
       if (firstTabPane) {
-        // Remove active from all panes
         document.querySelectorAll('.tab-pane').forEach(function(pane) {
           pane.classList.remove('active', 'show');
         });
-        // Add active to correct pane
         firstTabPane.classList.add('active', 'show');
       }
       
-      // Ensure correct nav link is active
       var correctLink = document.querySelector('a[data-value=\"Respondent Overview\"]');
       if (correctLink) {
         document.querySelectorAll('.navbar-nav a').forEach(function(link) {
@@ -463,7 +434,12 @@ tags$script(HTML("
         correctLink.classList.add('active');
       }
       
-      // Trigger window resize to force plotly charts to redraw
+      // Click the Church Expectations tab to initialize it
+      var churchExpLink = document.querySelector('a[data-value=\"Church Expectations\"]');
+      if (churchExpLink) {
+        churchExpLink.click();
+      }
+      
       window.dispatchEvent(new Event('resize'));
     }, 100);
   });
