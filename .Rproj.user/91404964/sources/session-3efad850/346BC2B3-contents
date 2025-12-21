@@ -39,6 +39,18 @@ bs_theme_dependencies(bs_theme(preset = "bootstrap")) |>
   gap: 0.1rem !important;
 }
 
+.tab-pane {
+  overflow-x: auto;
+}
+
+.bslib-grid {
+  max-width: 100%;
+}
+
+.html-fill-container {
+  overflow-x: hidden;
+}
+
 ```
 
 
@@ -397,5 +409,64 @@ navset_bar(
   )
 )
 
+```
+
+```{r}
+#| echo: false
+
+# tags$script(HTML("
+#   document.addEventListener('DOMContentLoaded', function() {
+#     // Find the active tab link and trigger a click
+#     var activeTab = document.querySelector('.navbar-nav li.active a');
+#     if (activeTab && !activeTab.classList.contains('active')) {
+#       activeTab.click();
+#     }
+#   });
+# "))
+
+# tags$script(HTML("
+#   window.addEventListener('load', function() {
+#     // Force the first tab to be properly activated
+#     var firstTabPane = document.querySelector('[data-value=\"Respondent Overview\"]');
+#     if (firstTabPane && !firstTabPane.classList.contains('active')) {
+#       // Remove active from any other panes
+#       document.querySelectorAll('.tab-pane.active').forEach(function(pane) {
+#         pane.classList.remove('active');
+#       });
+#       // Add active to the correct pane
+#       firstTabPane.classList.add('active');
+#     }
+#   });
+# "))
+
+#| echo: false
+tags$script(HTML("
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      // Ensure correct tab pane is visible
+      var firstTabPane = document.querySelector('.tab-pane[data-value=\"Respondent Overview\"]');
+      if (firstTabPane) {
+        // Remove active from all panes
+        document.querySelectorAll('.tab-pane').forEach(function(pane) {
+          pane.classList.remove('active', 'show');
+        });
+        // Add active to correct pane
+        firstTabPane.classList.add('active', 'show');
+      }
+      
+      // Ensure correct nav link is active
+      var correctLink = document.querySelector('a[data-value=\"Respondent Overview\"]');
+      if (correctLink) {
+        document.querySelectorAll('.navbar-nav a').forEach(function(link) {
+          link.classList.remove('active');
+        });
+        correctLink.classList.add('active');
+      }
+      
+      // Trigger window resize to force plotly charts to redraw
+      window.dispatchEvent(new Event('resize'));
+    }, 100);
+  });
+"))
 ```
 
