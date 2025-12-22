@@ -21,6 +21,7 @@ library(crosstalk)
 library(htmltools)
 library(bslib)
 library(reactable)
+library(tippy)
 
 
 bs_theme_dependencies(bs_theme(preset = "bootstrap")) |>
@@ -122,28 +123,10 @@ title_wrap <- function(str, line_br = "<br>", ...){
     str_replace_all(pattern = "\\n", replacement = line_br)
 }
 
-truncate_cell <- function(max_chars = 50) {
-  function(value) {
-    if (is.na(value) || nchar(value) <= max_chars) return(value)
-    
-    div(
-      title = value,
-      style = "cursor: help; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;",
-      value
-    )
-  }
+with_tooltip <- function(value, tooltip, ...) {
+  div(style = "text-decoration: underline; text-decoration-style: dotted; cursor: help",
+      tippy(value, tooltip, ...))
 }
-
-tags$script(HTML("
-  document.addEventListener('DOMContentLoaded', function() {
-    tippy('.tooltip-cell', {
-      content: (reference) => reference.getAttribute('data-tooltip'),
-      allowHTML: true,
-      interactive: true,
-      maxWidth: 500
-    });
-  });
-"))
 
 ```
 
@@ -464,13 +447,10 @@ navset_bar(
           } else if(is.na(value) | nchar(value) <= 50) {
             return(value)
           }
-          # if (is.null(value) | is.na(value) | nchar(value) <= 50) return(value)
-          
-          htmltools::div(
-            class = "tooltip-cell",
-            `data-tooltip` = value,
-            style = "text-decoration: underline dotted; cursor: help;",
-            paste0(substr(value, 1, 50), "...")
+
+          with_tooltip(
+            paste0(substr(value, 1, 50), "..."),
+            value
           )
         },
         html = TRUE
