@@ -103,3 +103,38 @@ multi_long <- clean |>
 
 write_rds(clean, "survey_clean.rds")
 write_rds(multi_long, "survey_multi_long.rds")
+
+
+
+# Data for Dashboard Table -----------------------------------------------
+
+table_data <- clean |>
+  select(
+    response_id,
+    age_range, service_attendance, church_association_length,
+    church_mission_feeling, spiritually_fed, connected_to_community,
+    church_expectations_choice, church_expectations_other, connection_factors_choice, connection_factors_other,
+    music_styles_choice, music_styles_other, church_priorities_choice, church_priorities_other,
+    youth_program_feedback, additional_thoughts
+  ) |>
+  mutate(
+    across(
+      where(is.character),
+      function(str){
+        str_replace_all(str, ",", ", ") |>
+          str_squish()
+      }
+    )
+  )
+names(table_data) <- c(
+  "response_id",
+  "Age Range", "Primary Service", "Church Association Length",
+  "Church Mission Feeling", "Spiritually Fed", "MLC Community Connection",
+  "Church Expectations", "Church Expectations (Other)", "Connection Factors", "Connection Factors (Other)",
+  "Music Styles", "Music Styles-Other", "Church Priorities", "Church Priorities (Other)",
+  "Youth Program Feedback", "Additional Feedback"
+)
+
+# names(table_data)[match(data_names[data_names$new_name %in% names(table_data),"new_name"], names(table_data))] <- data_names[data_names$new_name %in% names(table_data),"full_name"]
+
+write_rds(table_data, "table_data.rds")

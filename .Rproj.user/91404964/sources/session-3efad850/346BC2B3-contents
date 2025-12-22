@@ -20,6 +20,7 @@ library(crosstalk)
 # library(DT)
 library(htmltools)
 library(bslib)
+library(reactable)
 
 
 bs_theme_dependencies(bs_theme(preset = "bootstrap")) |>
@@ -51,6 +52,18 @@ bs_theme_dependencies(bs_theme(preset = "bootstrap")) |>
   overflow-x: hidden;
 }
 
+.reactable {
+  height: 600px;
+  overflow: auto;
+}
+
+.rt-thead {
+  position: sticky !important;
+  top: 0 !important;
+  background: white !important;
+  z-index: 10 !important;
+}
+
 ```
 
 
@@ -58,6 +71,7 @@ bs_theme_dependencies(bs_theme(preset = "bootstrap")) |>
 
 wide <- read_rds("survey_clean.rds")
 long <- read_rds("survey_multi_long.rds")
+table_data <- read_rds("table_data.rds")
 
 shared_wide <- SharedData$new(wide, key = ~response_id)
 shared_long <- SharedData$new(wide, key = ~response_id, group = "long_survey")
@@ -107,6 +121,29 @@ title_wrap <- function(str, line_br = "<br>", ...){
   str_wrap(str, ...) |>
     str_replace_all(pattern = "\\n", replacement = line_br)
 }
+
+truncate_cell <- function(max_chars = 50) {
+  function(value) {
+    if (is.na(value) || nchar(value) <= max_chars) return(value)
+    
+    div(
+      title = value,
+      style = "cursor: help; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;",
+      value
+    )
+  }
+}
+
+tags$script(HTML("
+  document.addEventListener('DOMContentLoaded', function() {
+    tippy('.tooltip-cell', {
+      content: (reference) => reference.getAttribute('data-tooltip'),
+      allowHTML: true,
+      interactive: true,
+      maxWidth: 500
+    });
+  });
+"))
 
 ```
 
@@ -405,6 +442,38 @@ navset_bar(
               staticPlot = TRUE
             )
         )
+      )
+    )
+  ),
+  nav_panel(
+    title = "Full Data",
+    reactable(
+      table_data |> select(-response_id),
+      height = "700px",
+      highlight = TRUE, striped = TRUE,
+      searchable = TRUE, filterable = TRUE, resizable = TRUE, showPageSizeOptions = TRUE, defaultPageSize = 25,
+      defaultColDef = colDef(
+        minWidth = 115,
+        headerStyle = list(position = "sticky", top = 0, background = "#fff", zIndex = 1),
+        cell = function(value) {
+          # print(value)
+          if (length(value) == 0){
+            return(value)
+          } else if(class(value) != "character"){
+            return(value)
+          } else if(is.na(value) | nchar(value) <= 50) {
+            return(value)
+          }
+          # if (is.null(value) | is.na(value) | nchar(value) <= 50) return(value)
+          
+          htmltools::div(
+            class = "tooltip-cell",
+            `data-tooltip` = value,
+            style = "text-decoration: underline dotted; cursor: help;",
+            paste0(substr(value, 1, 50), "...")
+          )
+        },
+        html = TRUE
       )
     )
   )
