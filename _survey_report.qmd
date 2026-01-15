@@ -1,0 +1,570 @@
+---
+title: "Memorial Lutheran Church Survey Report"
+format: 
+  typst:
+    toc: true
+    number-sections: true
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r setup}
+library(readr)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(forcats)
+library(ggplot2)
+library(ggfittext)
+library(gt)
+library(scales)
+
+# Load data
+wide <- read_rds("survey_clean.rds")
+long <- read_rds("survey_multi_long.rds")
+
+# Create age groups for comparison
+wide <- wide |>
+  mutate(
+    age_group = case_when(
+      age_range %in% c("Under 20", "20-29", "30-39", "40-49") ~ "Under 50",
+      age_range %in% c("50-59", "60-69", "70-79", "80+") ~ "50 and Over",
+      TRUE ~ NA_character_
+    ),
+    age_group = factor(age_group, levels = c("Under 50", "50 and Over"))
+  )
+
+# Add age group to long data
+long <- long |>
+  mutate(
+    age_group = case_when(
+      age_range %in% c("Under 20", "20-29", "30-39", "40-49") ~ "Under 50",
+      age_range %in% c("50-59", "60-69", "70-79", "80+") ~ "50 and Over",
+      TRUE ~ NA_character_
+    ),
+    age_group = factor(age_group, levels = c("Under 50", "50 and Over"))
+  )
+
+# Theme for plots
+theme_set(theme_minimal() + 
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    plot.title = element_text(size = 11, face = "bold", hjust = 0.5),
+    plot.title.position = "plot" # Centers title relative to the entire plot, not just the panel
+  ))
+
+```
+
+# Executive Summary
+
+This report summarizes the results from the Memorial Lutheran Church congregation survey conducted in December 2025. A total of `r nrow(wide)` responses were collected.
+
+\newpage
+
+# Respondent Demographics
+
+## Overview Table
+
+```{r demographics_table}
+# Create summary table
+demo_summary <- wide |>
+  summarise(
+    `Total Responses` = n(),
+    `Median Age Range` = median(as.numeric(age_range), na.rm = TRUE),
+    `Under 50` = sum(age_group == "Under 50", na.rm = TRUE),
+    `50 and Over` = sum(age_group == "50 and Over", na.rm = TRUE)
+  )
+
+demo_summary |>
+  gt() |>
+  tab_header(
+    title = "Survey Response Summary"
+  ) |>
+  fmt_number(
+    columns = everything(),
+    decimals = 0
+  )
+```
+
+## Age Distribution
+
+```{r age_table}
+wide |>
+  filter(!is.na(age_range)) |>
+  count(age_range) |>
+  mutate(
+    Percentage = percent(n / sum(n), accuracy = 0.1)
+  ) |>
+  rename(
+    `Age Range` = age_range,
+    Count = n
+  ) |>
+  gt() |>
+  tab_header(
+    title = "Age Distribution of Respondents"
+  )
+```
+
+## Service Attendance
+
+```{r service_table}
+wide |>
+  filter(!is.na(service_attendance)) |>
+  count(service_attendance) |>
+  mutate(
+    Percentage = percent(n / sum(n), accuracy = 0.1)
+  ) |>
+  rename(
+    `Primary Service` = service_attendance,
+    Count = n
+  ) |>
+  gt() |>
+  tab_header(
+    title = "Primary Service Attendance"
+  )
+```
+
+## Church Association Length
+
+```{r association_table}
+wide |>
+  filter(!is.na(church_association_length)) |>
+  count(church_association_length) |>
+  mutate(
+    Percentage = percent(n / sum(n), accuracy = 0.1)
+  ) |>
+  rename(
+    `Association Length` = church_association_length,
+    Count = n
+  ) |>
+  gt() |>
+  tab_header(
+    title = "Length of Church Association"
+  )
+```
+
+\newpage
+
+# Single Choice Questions
+
+## Church Mission Satisfaction
+
+### Overall Response
+
+```{r mission_overall, fig.height=3.5}
+mission_data <- wide |>
+  filter(!is.na(church_mission_feeling)) |>
+  count(church_mission_feeling, .drop = FALSE)
+
+n_responses <- sum(mission_data$n)
+
+mission_data |>
+  ggplot(aes(x = church_mission_feeling, y = n)) +
+  geom_col(fill = "steelblue") +
+  geom_bar_text(aes(label = n)) +
+  labs(
+    title = sprintf("How do you feel about MLC's mission? (n=%d)", n_responses),
+    x = NULL,
+    y = "Count"
+  ) +
+  theme(axis.text.x = element_text(size = 8))
+```
+
+### By Age Group
+
+```{r mission_age, fig.height=3.5}
+mission_age_data <- wide |>
+  filter(!is.na(church_mission_feeling), !is.na(age_group)) |>
+  count(age_group, church_mission_feeling, .drop = FALSE)
+
+mission_age_data |>
+  ggplot(aes(x = church_mission_feeling, y = n, fill = age_group)) +
+  geom_col(position = "dodge") +
+  geom_bar_text(aes(label = n)) +
+  facet_grid(~age_group) +
+  labs(
+    title = "Mission Satisfaction by Age Group",
+    x = NULL,
+    y = "Count"
+  ) +
+  theme(
+    legend.position = "none",
+    axis.text.x = element_text(size = 7)
+  ) +
+  scale_fill_manual(values = c("Under 50" = "#4E79A7", "50 and Over" = "#F28E2B"))
+```
+
+\newpage
+
+## Spiritually Fed
+
+### Overall Response
+
+```{r spiritual_overall, fig.height=3.5}
+spiritual_data <- wide |>
+  filter(!is.na(spiritually_fed)) |>
+  count(spiritually_fed, .drop = FALSE)
+
+n_responses <- sum(spiritual_data$n)
+
+spiritual_data |>
+  ggplot(aes(x = spiritually_fed, y = n)) +
+  geom_col(fill = "steelblue") +
+  geom_bar_text(aes(label = n)) +
+  labs(
+    title = sprintf("Do you feel spiritually fed? (n=%d)", n_responses),
+    x = NULL,
+    y = "Count"
+  )
+```
+
+### By Age Group
+
+```{r spiritual_age, fig.height=3.5}
+spiritual_age_data <- wide |>
+  filter(!is.na(spiritually_fed), !is.na(age_group)) |>
+  count(age_group, spiritually_fed, .drop = FALSE)
+
+spiritual_age_data |>
+  ggplot(aes(x = spiritually_fed, y = n, fill = age_group)) +
+  geom_col(position = "dodge") +
+  geom_bar_text(aes(label = n)) +
+  facet_grid(~age_group) +
+  labs(
+    title = "Spiritually Fed by Age Group",
+    x = NULL,
+    y = "Count"
+  ) +
+  theme(legend.position = "none") +
+  scale_fill_manual(values = c("Under 50" = "#4E79A7", "50 and Over" = "#F28E2B"))
+```
+
+\newpage
+
+## Community Connection
+
+### Overall Response
+
+```{r community_overall, fig.height=3.5}
+community_data <- wide |>
+  filter(!is.na(connected_to_community)) |>
+  count(connected_to_community, .drop = FALSE)
+
+n_responses <- sum(community_data$n)
+
+community_data |>
+  ggplot(aes(x = connected_to_community, y = n)) +
+  geom_col(fill = "steelblue") +
+  geom_bar_text(aes(label = n)) +
+  labs(
+    title = sprintf("Do you feel connected to the MLC community? (n=%d)", n_responses),
+    x = NULL,
+    y = "Count"
+  )
+```
+
+### By Age Group
+
+```{r community_age, fig.height=3.5}
+community_age_data <- wide |>
+  filter(!is.na(connected_to_community), !is.na(age_group)) |>
+  count(age_group, connected_to_community, .drop = FALSE)
+
+community_age_data |>
+  ggplot(aes(x = connected_to_community, y = n, fill = age_group)) +
+  geom_col(position = "dodge") +
+  geom_bar_text(aes(label = n)) +
+  facet_grid(~age_group) +
+  labs(
+    title = "Community Connection by Age Group",
+    x = NULL,
+    y = "Count"
+  ) +
+  theme(legend.position = "none") +
+  scale_fill_manual(values = c("Under 50" = "#4E79A7", "50 and Over" = "#F28E2B"))
+```
+
+\newpage
+
+# Multiple Choice Questions
+
+## Church Expectations
+
+### Overall Response
+
+```{r expectations_overall, fig.height=4}
+expectations_data <- long |>
+  filter(question == "church_expectations_choice", !is.na(response)) |>
+  count(response) |>
+  arrange(desc(n)) |>
+  mutate(response = str_wrap(response, 30))
+
+n_responses <- length(unique(long$response_id[long$question == "church_expectations_choice" & !is.na(long$response)]))
+
+expectations_data |>
+  ggplot(aes(x = reorder(response, n), y = n)) +
+  geom_col(fill = "steelblue") +
+  geom_bar_text(aes(label = n)) +
+  coord_flip() +
+  labs(
+    title = sprintf("What do you look forward to most at MLC? (n=%d)", n_responses),
+    x = NULL,
+    y = "Count"
+  ) +
+  theme(axis.text.x = element_text(angle = 0))
+```
+
+### By Age Group
+
+```{r expectations_age, fig.height=4}
+# Get all unique responses to ensure all levels are shown
+all_responses <- long |>
+  filter(question == "church_expectations_choice", !is.na(response)) |>
+  pull(response) |>
+  unique()
+
+expectations_age_data <- long |>
+  filter(question == "church_expectations_choice", !is.na(response), !is.na(age_group)) |>
+  count(age_group, response) |>
+  complete(age_group, response = all_responses, fill = list(n = 0)) |>
+  arrange(desc(n)) |>
+  mutate(response = str_wrap(response, 25))
+
+expectations_age_data |>
+  ggplot(aes(x = reorder(response, n), y = n, fill = age_group)) +
+  geom_col(position = "dodge") +
+  geom_bar_text(aes(label = n)) +
+  coord_flip() +
+  facet_grid(~age_group) +
+  labs(
+    title = "Church Expectations by Age Group",
+    x = NULL,
+    y = "Count"
+  ) +
+  theme(
+    legend.position = "none",
+    axis.text.y = element_text(size = 7)
+  ) +
+  scale_fill_manual(values = c("Under 50" = "#4E79A7", "50 and Over" = "#F28E2B"))
+```
+
+\newpage
+
+## Connection Factors
+
+### Overall Response
+
+```{r connection_overall, fig.height=4}
+connection_data <- long |>
+  filter(question == "connection_factors_choice", !is.na(response)) |>
+  count(response) |>
+  arrange(desc(n)) |>
+  mutate(response = str_wrap(response, 30))
+
+n_responses <- length(unique(long$response_id[long$question == "connection_factors_choice" & !is.na(long$response)]))
+
+connection_data |>
+  ggplot(aes(x = reorder(response, n), y = n)) +
+  geom_col(fill = "steelblue") +
+  geom_bar_text(aes(label = n)) +
+  coord_flip() +
+  labs(
+    title = sprintf("What makes you feel connected to others at MLC? (n=%d)", n_responses),
+    x = NULL,
+    y = "Count"
+  ) +
+  theme(axis.text.x = element_text(angle = 0))
+```
+
+### By Age Group
+
+```{r connection_age, fig.height=4}
+all_responses <- long |>
+  filter(question == "connection_factors_choice", !is.na(response)) |>
+  pull(response) |>
+  unique()
+
+connection_age_data <- long |>
+  filter(question == "connection_factors_choice", !is.na(response), !is.na(age_group)) |>
+  count(age_group, response) |>
+  complete(age_group, response = all_responses, fill = list(n = 0)) |>
+  arrange(desc(n)) |>
+  mutate(response = str_wrap(response, 25))
+
+connection_age_data |>
+  ggplot(aes(x = reorder(response, n), y = n, fill = age_group)) +
+  geom_col(position = "dodge") +
+  geom_bar_text(aes(label = n)) +
+  coord_flip() +
+  facet_grid(~age_group) +
+  labs(
+    title = "Connection Factors by Age Group",
+    x = NULL,
+    y = "Count"
+  ) +
+  theme(
+    legend.position = "none",
+    axis.text.y = element_text(size = 7)
+  ) +
+  scale_fill_manual(values = c("Under 50" = "#4E79A7", "50 and Over" = "#F28E2B"))
+```
+
+\newpage
+
+## Music Styles
+
+### Overall Response
+
+```{r music_overall, fig.height=3.5}
+music_data <- long |>
+  filter(question == "music_styles_choice", !is.na(response)) |>
+  count(response) |>
+  arrange(desc(n)) |>
+  mutate(response = str_wrap(response, 30))
+
+n_responses <- length(unique(long$response_id[long$question == "music_styles_choice" & !is.na(long$response)]))
+
+music_data |>
+  ggplot(aes(x = reorder(response, n), y = n)) +
+  geom_col(fill = "steelblue") +
+  geom_bar_text(aes(label = n)) +
+  coord_flip() +
+  labs(
+    title = sprintf("What music styles do you feel most connected to? (n=%d)", n_responses),
+    x = NULL,
+    y = "Count"
+  ) +
+  theme(axis.text.x = element_text(angle = 0))
+```
+
+### By Age Group
+
+```{r music_age, fig.height=3.5}
+all_responses <- long |>
+  filter(question == "music_styles_choice", !is.na(response)) |>
+  pull(response) |>
+  unique()
+
+music_age_data <- long |>
+  filter(question == "music_styles_choice", !is.na(response), !is.na(age_group)) |>
+  count(age_group, response) |>
+  complete(age_group, response = all_responses, fill = list(n = 0)) |>
+  arrange(desc(n)) |>
+  mutate(response = str_wrap(response, 25))
+
+music_age_data |>
+  ggplot(aes(x = reorder(response, n), y = n, fill = age_group)) +
+  geom_col(position = "dodge") +
+  geom_bar_text(aes(label = n)) +
+  coord_flip() +
+  facet_grid(~age_group) +
+  labs(
+    title = "Music Styles by Age Group",
+    x = NULL,
+    y = "Count"
+  ) +
+  theme(
+    legend.position = "none",
+    axis.text.y = element_text(size = 7)
+  ) +
+  scale_fill_manual(values = c("Under 50" = "#4E79A7", "50 and Over" = "#F28E2B"))
+```
+
+\newpage
+
+## Church Priorities
+
+### Overall Response
+
+```{r priorities_overall, fig.height=4}
+priorities_data <- long |>
+  filter(question == "church_priorities_choice", !is.na(response)) |>
+  count(response) |>
+  arrange(desc(n)) |>
+  mutate(response = str_wrap(response, 30))
+
+n_responses <- length(unique(long$response_id[long$question == "church_priorities_choice" & !is.na(long$response)]))
+
+priorities_data |>
+  ggplot(aes(x = reorder(response, n), y = n)) +
+  geom_col(fill = "steelblue") +
+  geom_bar_text(aes(label = n)) +
+  coord_flip() +
+  labs(
+    title = sprintf("What should be prioritized in the next 3-5 years? (n=%d)", n_responses),
+    x = NULL,
+    y = "Count"
+  ) +
+  theme(axis.text.x = element_text(angle = 0))
+```
+
+### By Age Group
+
+```{r priorities_age, fig.height=4}
+all_responses <- long |>
+  filter(question == "church_priorities_choice", !is.na(response)) |>
+  pull(response) |>
+  unique()
+
+priorities_age_data <- long |>
+  filter(question == "church_priorities_choice", !is.na(response), !is.na(age_group)) |>
+  count(age_group, response) |>
+  complete(age_group, response = all_responses, fill = list(n = 0)) |>
+  arrange(desc(n)) |>
+  mutate(response = str_wrap(response, 25))
+
+priorities_age_data |>
+  ggplot(aes(x = reorder(response, n), y = n, fill = age_group)) +
+  geom_col(position = "dodge") +
+  geom_bar_text(aes(label = n)) +
+  coord_flip() +
+  facet_grid(~age_group) +
+  labs(
+    title = "Church Priorities by Age Group",
+    x = NULL,
+    y = "Count"
+  ) +
+  theme(
+    legend.position = "none",
+    axis.text.y = element_text(size = 7)
+  ) +
+  scale_fill_manual(values = c("Under 50" = "#4E79A7", "50 and Over" = "#F28E2B"))
+```
+
+\newpage
+
+# Appendix
+
+## Response Rates by Question
+
+```{r response_rates}
+tibble(
+  Question = c(
+    "Church Mission Feeling",
+    "Spiritually Fed",
+    "Connected to Community",
+    "Church Expectations",
+    "Connection Factors",
+    "Music Styles",
+    "Church Priorities"
+  ),
+  `Total Responses` = c(
+    sum(!is.na(wide$church_mission_feeling)),
+    sum(!is.na(wide$spiritually_fed)),
+    sum(!is.na(wide$connected_to_community)),
+    length(unique(long$response_id[long$question == "church_expectations_choice" & !is.na(long$response)])),
+    length(unique(long$response_id[long$question == "connection_factors_choice" & !is.na(long$response)])),
+    length(unique(long$response_id[long$question == "music_styles_choice" & !is.na(long$response)])),
+    length(unique(long$response_id[long$question == "church_priorities_choice" & !is.na(long$response)]))
+  )
+) |>
+  mutate(
+    `Response Rate` = percent(`Total Responses` / nrow(wide), accuracy = 0.1)
+  ) |>
+  gt() |>
+  tab_header(
+    title = "Response Rates by Question"
+  )
+```
